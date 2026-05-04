@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<!-- saved from url=(0061)file:///C:/Users/user/Downloads/hiroshima-travel-guide_2.html -->
+<!-- saved from url=(0060)https://glenn543.github.io/2026-/hiroshima-travel-guide.html -->
 <html lang="zh-TW"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>廣島 2026 旅遊手冊 </title>
 <link rel="preconnect" href="https://fonts.googleapis.com/">
 <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
-<link href="./廣島 2026 旅遊手冊_files/css2" rel="stylesheet">
+<link href="./廣島 2026 旅遊手冊V3_files/css2" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -707,6 +707,192 @@
     .day-header { gap: 14px; }
   }
 
+  /* ── AIRPORT PICKUP ── */
+  .pickup-section {
+    background: var(--paper-card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 1.4rem 1.6rem;
+    margin-bottom: 1.2rem;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .pickup-section-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 1.1rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .pickup-section-icon {
+    width: 36px;
+    height: 36px;
+    background: #E6F1FB;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+
+  .pickup-section-title {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--ink);
+  }
+
+  .pickup-section-sub {
+    font-size: 11px;
+    color: var(--ink-soft);
+    margin-top: 1px;
+  }
+
+  .pickup-group {
+    margin-bottom: 1rem;
+  }
+
+  .pickup-group:last-child { margin-bottom: 0; }
+
+  .pickup-group-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #185FA5;
+    background: #E6F1FB;
+    padding: 3px 10px 3px 8px;
+    border-radius: 6px;
+    margin-bottom: 0.75rem;
+  }
+
+  .pickup-rows { display: flex; flex-direction: column; gap: 8px; }
+
+  .pickup-row {
+    display: grid;
+    grid-template-columns: 56px 1fr auto;
+    align-items: start;
+    gap: 10px;
+    background: var(--paper-warm);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 10px 12px;
+  }
+
+  .pickup-time {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 17px;
+    font-weight: 800;
+    color: var(--red);
+    line-height: 1;
+    padding-top: 1px;
+  }
+
+  .pickup-info { flex: 1; }
+
+  .pickup-location {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--ink);
+    line-height: 1.3;
+  }
+
+  .pickup-contact {
+    font-size: 11px;
+    color: var(--ink-soft);
+    margin-top: 3px;
+  }
+
+  .pickup-contact strong {
+    color: var(--red-dark);
+  }
+
+  .pickup-alert {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 600;
+    color: #854F0B;
+    background: #FAEEDA;
+    border-radius: 4px;
+    padding: 1px 6px;
+    margin-top: 4px;
+    letter-spacing: 0.03em;
+  }
+
+  .pickup-members {
+    font-size: 10.5px;
+    color: var(--ink-muted);
+    text-align: right;
+    line-height: 1.6;
+    min-width: 90px;
+    max-width: 110px;
+  }
+
+  .pickup-members-label {
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    margin-bottom: 2px;
+  }
+
+  .pickup-count-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 10px;
+    font-weight: 500;
+    color: var(--ink-soft);
+    background: var(--paper-card);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 2px 8px;
+    margin-bottom: 6px;
+  }
+
+  .pickup-self-note {
+    font-size: 11.5px;
+    color: var(--ink-mid);
+    background: var(--paper-warm);
+    border: 1px dashed var(--border-mid);
+    border-radius: 8px;
+    padding: 8px 12px;
+    margin-top: 6px;
+    line-height: 1.6;
+  }
+
+  .pickup-members-inline {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-top: 6px;
+  }
+
+  .pickup-member-chip {
+    font-size: 10.5px;
+    font-weight: 400;
+    color: var(--ink-mid);
+    background: var(--paper-card);
+    border: 1px solid var(--border-mid);
+    border-radius: 20px;
+    padding: 2px 9px;
+    white-space: nowrap;
+  }
+
+  @media (max-width: 600px) {
+    .pickup-row {
+      grid-template-columns: 48px 1fr;
+    }
+    .pickup-members { display: none; }
+  }
+
   /* ── FADE IN ANIMATION ── */
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(20px); }
@@ -761,7 +947,7 @@
     <a class="nav-link" href="file:///C:/Users/user/Downloads/hiroshima-travel-guide_2.html#day3">5/19</a>
     <a class="nav-link" href="file:///C:/Users/user/Downloads/hiroshima-travel-guide_2.html#day4">5/20</a>
     <a class="nav-link" href="file:///C:/Users/user/Downloads/hiroshima-travel-guide_2.html#day5">5/21</a>
-    <a class="nav-link active" href="file:///C:/Users/user/Downloads/hiroshima-travel-guide_2.html#day6">5/22</a>
+    <a class="nav-link" href="file:///C:/Users/user/Downloads/hiroshima-travel-guide_2.html#day6">5/22</a>
     <a class="nav-link" href="file:///C:/Users/user/Downloads/hiroshima-travel-guide_2.html#day7">5/23</a>
     <a class="nav-link" href="file:///C:/Users/user/Downloads/hiroshima-travel-guide_2.html#day8">5/24</a>
   </div>
@@ -783,6 +969,95 @@
         <div class="day-num-label">Day 1</div>
         <h2 class="day-title">抵達廣島</h2>
         <span class="day-region-badge r-hiroshima">廣島市</span>
+      </div>
+    </div>
+
+    <!-- AIRPORT PICKUP SECTION -->
+    <div class="pickup-section">
+      <div class="pickup-section-header">
+        <div class="pickup-section-icon">🚐</div>
+        <div>
+          <div class="pickup-section-title">機場接送安排</div>
+          <div class="pickup-section-sub">出發日 5/17 · 桃園機場集合，共三車</div>
+        </div>
+      </div>
+
+      <!-- Car 1: Taipei -->
+      <div class="pickup-group">
+        <div class="pickup-group-label">🚗 第一車 · 台北出發 · 6人</div>
+        <div class="pickup-rows">
+          <div class="pickup-row">
+            <div class="pickup-time">4:00</div>
+            <div class="pickup-info">
+              <div class="pickup-location">辛亥</div>
+              <div class="pickup-contact">聯絡人：<strong>Hauzhen</strong></div>
+              <span class="pickup-count-badge">🧑‍🤝‍🧑 接送 2 人</span>
+              <div class="pickup-members-inline">
+                <span class="pickup-member-chip">Hauzhen</span>
+                <span class="pickup-member-chip">qin</span>
+              </div>
+            </div>
+          </div>
+          <div class="pickup-row">
+            <div class="pickup-time">4:15</div>
+            <div class="pickup-info">
+              <div class="pickup-location">光復南路</div>
+              <div class="pickup-contact">聯絡人：<strong>Jay Tseng</strong></div>
+              <span class="pickup-alert">⚠️ 報「王先生」</span>
+              <span class="pickup-count-badge" style="margin-left:0;">🧑‍🤝‍🧑 接送 5 人</span>
+              <div class="pickup-members-inline">
+                <span class="pickup-member-chip">XiaoRu</span>
+                <span class="pickup-member-chip">Jay Tseng</span>
+                <span class="pickup-member-chip">Pei-Shan Hung</span>
+                <span class="pickup-member-chip">蝌蚪</span>
+                <span class="pickup-member-chip">曼巴</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Car 2: Taipei -->
+      <div class="pickup-group">
+        <div class="pickup-group-label">🚗 第二車 · 台北出發 · 4人</div>
+        <div class="pickup-rows">
+          <div class="pickup-row">
+            <div class="pickup-time">4:00</div>
+            <div class="pickup-info">
+              <div class="pickup-location">東湖</div>
+              <div class="pickup-contact">聯絡人：<strong>Prolong Lai</strong></div>
+              <span class="pickup-count-badge">🧑‍🤝‍🧑 接送 2 人</span>
+              <div class="pickup-members-inline">
+                <span class="pickup-member-chip">Prolong Lai</span>
+                <span class="pickup-member-chip">littleherry</span>
+              </div>
+            </div>
+          </div>
+          <div class="pickup-row">
+            <div class="pickup-time">4:15</div>
+            <div class="pickup-info">
+              <div class="pickup-location">光復南路</div>
+              <div class="pickup-contact">聯絡人：<strong>阿蓓</strong></div>
+              <span class="pickup-alert">⚠️ 報「倪小姐」</span>
+              <span class="pickup-count-badge" style="margin-left:0;">🧑‍🤝‍🧑 接送 2 人</span>
+              <div class="pickup-members-inline">
+                <span class="pickup-member-chip">alex</span>
+                <span class="pickup-member-chip">阿蓓</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Car 3: Hsinchu - self-arranged -->
+      <div class="pickup-group">
+        <div class="pickup-group-label">🚗 第三團 · 新竹出發 · 4人</div>
+        <div class="pickup-rows">
+          <div class="pickup-self-note">
+            🗺️ <strong>4:00</strong>　Glenn、Yen 兩人各自前往機場集合<br>
+            🗺️ <strong>4:00</strong>　ida、IO 兩人各自前往機場集合
+          </div>
+        </div>
       </div>
     </div>
 
@@ -827,7 +1102,7 @@
     <div class="spots-grid">
 
       <div class="spot-card" data-primary="must">
-        <div class="spot-img-wrap"><img class="spot-img" src="https://wp-odai.wamazing.com/media/wp-content/uploads/sites/2/2021/12/hiroshimapeacememorialpark_078404ed17aaf1b212072d1ddaca6ba2_m.jpg.webp" alt="原爆圓頂館" loading="lazy"></div>
+        <div class="spot-img-wrap"><img class="spot-img" src="https://glenn543.github.io/2026-/%E5%BB%A3%E5%B3%B6%202026%20%E6%97%85%E9%81%8A%E6%89%8B%E5%86%8AV3_files/hiroshimapeacememorialpark_078404ed17aaf1b212072d1ddaca6ba2_m.jpg.webp" alt="原爆圓頂館" loading="lazy"></div>
         <div class="spot-time-badge">下午</div>
         <div class="spot-name">原爆圓頂館</div>
         <div class="spot-en">Atomic Bomb Dome</div>
@@ -842,7 +1117,7 @@
       </div>
 
       <div class="spot-card" data-primary="must">
-		<div class="spot-img-wrap"><img class="spot-img" src="https://www.agoda.com/wp-content/uploads/2024/01/Featured-image-Hiroshima-Peace-Memorial-Park-1244x700.jpg" alt="廣島和平紀念公園" loading="lazy"></div>
+		<div class="spot-img-wrap"><img class="spot-img" src="https://glenn543.github.io/2026-/%E5%BB%A3%E5%B3%B6%202026%20%E6%97%85%E9%81%8A%E6%89%8B%E5%86%8AV3_files/Featured-image-Hiroshima-Peace-Memorial-Park-1244x700.jpg" alt="廣島和平紀念公園" loading="lazy"></div>
         <div class="spot-time-badge">下午</div>
         <div class="spot-name">廣島和平紀念公園</div>
         <div class="spot-en">Peace Memorial Park</div>
@@ -857,7 +1132,7 @@
       </div>
 
       <div class="spot-card" data-primary="history">
-        <div class="spot-img-wrap"><img class="spot-img" src="https://res.klook.com/images/w_1200,h_630,c_fill,q_65/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/x72bq26pfpao1daonid5/%E5%BB%A3%E5%B3%B6%E5%92%8C%E5%B9%B3%E7%B4%80%E5%BF%B5%E8%B3%87%E6%96%99%E9%A4%A8%E5%B8%B8%E8%A8%AD%E5%B1%95%E8%A6%BD%E9%96%80%E7%A5%A8-Klook%E5%AE%A2%E8%B7%AF.jpg" alt="和平紀念資料館" loading="lazy"></div>
+        <div class="spot-img-wrap"><img class="spot-img" src="https://glenn543.github.io/2026-/%E5%BB%A3%E5%B3%B6%202026%20%E6%97%85%E9%81%8A%E6%89%8B%E5%86%8AV3_files/廣島和平紀念資料館常設展覽門票-Klook客路.jpg" alt="和平紀念資料館" loading="lazy"></div>
         <div class="spot-time-badge">下午</div>
         <div class="spot-name">和平紀念資料館</div>
         <div class="spot-en">Peace Memorial Museum</div>
@@ -937,7 +1212,7 @@
     <div class="spots-grid">
 
       <div class="spot-card" data-primary="must">
-		<div class="spot-img-wrap"><img class="spot-img" src="https://www.mazda.com.tw/globalassets/mazda/mazda-stories/08_-mazda-/mazda_stories_2.jpg" alt="Mazda 博物館" loading="lazy"></div>
+		<div class="spot-img-wrap"><img class="spot-img" src="https://glenn543.github.io/2026-/%E5%BB%A3%E5%B3%B6%202026%20%E6%97%85%E9%81%8A%E6%89%8B%E5%86%8AV3_files/mazda_stories_2.jpg" alt="Mazda 博物館" loading="lazy"></div>
         <div class="spot-time-badge">9:00</div>
         <div class="spot-name">Mazda 博物館</div>
         <div class="spot-en">Mazda Museum</div>
@@ -952,7 +1227,7 @@
       </div>
 
       <div class="spot-card" data-primary="must">
-		<div class="spot-img-wrap"><img class="spot-img" src="https://cdn.japan-travel-note.com/images/00106/thumbnail-en-541x284.webp" alt="大和博物館" loading="lazy"></div>
+		<div class="spot-img-wrap"><img class="spot-img" src="https://glenn543.github.io/2026-/%E5%BB%A3%E5%B3%B6%202026%20%E6%97%85%E9%81%8A%E6%89%8B%E5%86%8AV3_files/thumbnail-en-541x284.webp" alt="大和博物館" loading="lazy"></div>
         <div class="spot-time-badge">13:00</div>
         <div class="spot-name">大和博物館</div>
         <div class="spot-en">Yamato Museum, Kure</div>
@@ -967,7 +1242,7 @@
       </div>
 
       <div class="spot-card" data-primary="must">
-		<div class="spot-img-wrap"><img class="spot-img" src="https://static.gltjp.com/glt/data/directory/13000/12506/20220109_114250_94b09204_w1920.webp" alt="鐵のくじら館" loading="lazy"></div>
+		<div class="spot-img-wrap"><img class="spot-img" src="https://glenn543.github.io/2026-/%E5%BB%A3%E5%B3%B6%202026%20%E6%97%85%E9%81%8A%E6%89%8B%E5%86%8AV3_files/20220109_114250_94b09204_w1920.webp" alt="鐵のくじら館" loading="lazy"></div>
         <div class="spot-time-badge">14:30</div>
         <div class="spot-name">鐵のくじら館</div>
         <div class="spot-en">Iron Whale Museum</div>
@@ -1049,7 +1324,7 @@
     <div class="spots-grid">
 
       <div class="spot-card" data-primary="must">
-		<div class="spot-img-wrap"><img class="spot-img" src="https://image-cdn.hypb.st/https%3A%2F%2Fpopbee.com%2Fimage%2F2024%2F12%2Fthe-worlds-most-beautiful-museums-simose-art-museum-hiroshima-japan15.jpg?w=1260&cbr=1&q=90&fit=max" alt="下瀨美術館" loading="lazy"></div>
+		<div class="spot-img-wrap"><img class="spot-img" src="https://glenn543.github.io/2026-/%E5%BB%A3%E5%B3%B6%202026%20%E6%97%85%E9%81%8A%E6%89%8B%E5%86%8AV3_files/https___popbee.com_image_2024_12_the-worlds-most-beautiful-museums-simose-art-museum-hiroshima-japan15.jpg" alt="下瀨美術館" loading="lazy"></div>
         <div class="spot-time-badge">9:30</div>
         <div class="spot-name">下瀨美術館</div>
         <div class="spot-en">Kage Museum of Art</div>
@@ -1064,7 +1339,7 @@
       </div>
 
       <div class="spot-card" data-primary="must">
-        <div class="spot-img-wrap"><img class="spot-img" src="https://wattention.com/tw/wp-content/uploads/2023/01/Itsukushima-Shrine-%E2%80%93-Hiroshima-4.jpg" alt="嚴島神社" loading="lazy"></div>
+        <div class="spot-img-wrap"><img class="spot-img" src="https://glenn543.github.io/2026-/%E5%BB%A3%E5%B3%B6%202026%20%E6%97%85%E9%81%8A%E6%89%8B%E5%86%8AV3_files/Itsukushima-Shrine-–-Hiroshima-4.jpg" alt="嚴島神社" loading="lazy"></div>
         <div class="spot-time-badge">午餐後</div>
         <div class="spot-name">嚴島神社</div>
         <div class="spot-en">Itsukushima Shrine</div>
@@ -1079,7 +1354,7 @@
       </div>
 
       <div class="spot-card" data-primary="food">
-		<div class="spot-img-wrap"><img class="spot-img" src="https://pic.pimg.tw/immegumi/1681055791-3233555511-g_l.jpg" alt="牡蠣料理街" loading="lazy"></div>
+		<div class="spot-img-wrap"><img class="spot-img" src="https://glenn543.github.io/2026-/%E5%BB%A3%E5%B3%B6%202026%20%E6%97%85%E9%81%8A%E6%89%8B%E5%86%8AV3_files/1681055791-3233555511-g_l.jpg" alt="牡蠣料理街" loading="lazy"></div>
         <div class="spot-time-badge">午餐</div>
         <div class="spot-name">牡蠣料理街</div>
         <div class="spot-en">Oyster Street, Miyajima</div>
@@ -1094,7 +1369,7 @@
       </div>
 
       <div class="spot-card" data-primary="history">
-		<div class="spot-img-wrap"><img class="spot-img" src="https://tw.tabiiro.travel/lpimg/leisure/206381/main/img4.jpg" alt="大聖院" loading="lazy"></div>
+		<div class="spot-img-wrap"><img class="spot-img" src="https://glenn543.github.io/2026-/%E5%BB%A3%E5%B3%B6%202026%20%E6%97%85%E9%81%8A%E6%89%8B%E5%86%8AV3_files/img4.jpg" alt="大聖院" loading="lazy"></div>
         <div class="spot-time-badge">下午</div>
         <div class="spot-name">大聖院</div>
         <div class="spot-en">Daisho-in Temple</div>
@@ -1109,7 +1384,7 @@
       </div>
 
       <div class="spot-card" data-primary="nature">
-		<div class="spot-img-wrap"><img class="spot-img" src="https://cdn-ak.f.st-hatena.com/images/fotolife/b/burariwalking/20250728/20250728114143.jpg" alt="彌山登山" loading="lazy"></div>
+		<div class="spot-img-wrap"><img class="spot-img" src="https://glenn543.github.io/2026-/%E5%BB%A3%E5%B3%B6%202026%20%E6%97%85%E9%81%8A%E6%89%8B%E5%86%8AV3_files/20250728114143.jpg" alt="彌山登山" loading="lazy"></div>
         <div class="spot-time-badge">下午</div>
         <div class="spot-name">彌山登山</div>
         <div class="spot-en">Mt. Misen Hiking</div>
@@ -1161,7 +1436,7 @@
     <div class="spots-grid">
 
       <div class="spot-card" data-primary="must">
-        <div class="spot-img-wrap"><img class="spot-img" src="https://wp-odai.wamazing.com/media/wp-content/uploads/sites/2/2025/03/onomichidaytrip_pixta_97735162_M.jpg.webp" alt="千光寺・尾道" loading="lazy"></div>
+        <div class="spot-img-wrap"><img class="spot-img" src="https://glenn543.github.io/2026-/%E5%BB%A3%E5%B3%B6%202026%20%E6%97%85%E9%81%8A%E6%89%8B%E5%86%8AV3_files/onomichidaytrip_pixta_97735162_M.jpg.webp" alt="千光寺・尾道" loading="lazy"></div>
         <div class="spot-time-badge">下午</div>
         <div class="spot-name">千光寺</div>
         <div class="spot-en">Senkoji Temple</div>
@@ -1176,7 +1451,7 @@
       </div>
 
       <div class="spot-card" data-primary="must">
-		<div class="spot-img-wrap"><img class="spot-img" src="https://www.onomichi-hansei.com/sightseeing/item/nekonohosomichi.jpg" alt="貓之細道" loading="lazy"></div>
+		<div class="spot-img-wrap"><img class="spot-img" src="https://glenn543.github.io/2026-/%E5%BB%A3%E5%B3%B6%202026%20%E6%97%85%E9%81%8A%E6%89%8B%E5%86%8AV3_files/nekonohosomichi.jpg" alt="貓之細道" loading="lazy"></div>
         <div class="spot-time-badge">下午</div>
         <div class="spot-name">貓之細道</div>
         <div class="spot-en">Cat's Alley</div>
@@ -1191,7 +1466,7 @@
       </div>
 
       <div class="spot-card" data-primary="food">
-		<div class="spot-img-wrap"><img class="spot-img" src="https://resources.matcha-jp.com/resize/720x2000/2019/08/30-84939.webp" alt="尾道本通り商店街" loading="lazy"></div>
+		<div class="spot-img-wrap"><img class="spot-img" src="https://glenn543.github.io/2026-/%E5%BB%A3%E5%B3%B6%202026%20%E6%97%85%E9%81%8A%E6%89%8B%E5%86%8AV3_files/30-84939.webp" alt="尾道本通り商店街" loading="lazy"></div>
         <div class="spot-time-badge">下午</div>
         <div class="spot-name">尾道本通り商店街</div>
         <div class="spot-en">Onomichi Hondori</div>
@@ -1273,7 +1548,7 @@
       </div>
 
       <div class="spot-card" data-primary="must">
-        <div class="spot-img-wrap"><img class="spot-img" src="https://img.cooljapan-videos.com/r/1000x666/files/article_images/6a1abbbe8a7ffae8c4e7aa9e7c910827eb6a4620.jpg.webp" alt="耕三寺・未來心の丘" loading="lazy"></div>
+        <div class="spot-img-wrap"><img class="spot-img" src="https://glenn543.github.io/2026-/%E5%BB%A3%E5%B3%B6%202026%20%E6%97%85%E9%81%8A%E6%89%8B%E5%86%8AV3_files/6a1abbbe8a7ffae8c4e7aa9e7c910827eb6a4620.jpg.webp" alt="耕三寺・未來心の丘" loading="lazy"></div>
         <div class="spot-time-badge">中途</div>
         <div class="spot-name">耕三寺・未來心の丘</div>
         <div class="spot-en">Kosanji Temple &amp; Miraishin Hill</div>
@@ -1288,7 +1563,7 @@
       </div>
 
       <div class="spot-card" data-primary="food">
-		<div class="spot-img-wrap"><img class="spot-img" src="https://image.dive-hiroshima.com/wp-content/uploads/2022/01/18-12-1024x521.jpg" alt="瀨戶田 檸檬料理" loading="lazy"></div>
+		<div class="spot-img-wrap"><img class="spot-img" src="https://glenn543.github.io/2026-/%E5%BB%A3%E5%B3%B6%202026%20%E6%97%85%E9%81%8A%E6%89%8B%E5%86%8AV3_files/18-12-1024x521.jpg" alt="瀨戶田 檸檬料理" loading="lazy"></div>
         <div class="spot-time-badge">午餐</div>
         <div class="spot-name">瀨戶田 檸檬料理</div>
         <div class="spot-en">Setoda Lemon Cuisine</div>
@@ -1303,7 +1578,7 @@
       </div>
 
       <div class="spot-card" data-primary="history">
-		<div class="spot-img-wrap"><img class="spot-img" src="https://momijiaoi.net/wp-content/uploads/2021/06/ooyamadumi2020032940.jpg" alt="大山祇神社" loading="lazy"></div>
+		<div class="spot-img-wrap"><img class="spot-img" src="https://glenn543.github.io/2026-/%E5%BB%A3%E5%B3%B6%202026%20%E6%97%85%E9%81%8A%E6%89%8B%E5%86%8AV3_files/ooyamadumi2020032940.jpg" alt="大山祇神社" loading="lazy"></div>
         <div class="spot-time-badge">抵達</div>
         <div class="spot-name">大山祇神社</div>
         <div class="spot-en">Oyamazumi Shrine</div>
@@ -1355,7 +1630,7 @@
     <div class="spots-grid">
 
       <div class="spot-card" data-primary="history">
-		<div class="spot-img-wrap"><img class="spot-img" src="https://hit-product-resources-public.s3.ap-northeast-1.amazonaws.com/images/2408/XKaY2vfittosnhTO9nb9/large.jpg" alt="今治城" loading="lazy"></div>
+		<div class="spot-img-wrap"><img class="spot-img" src="https://glenn543.github.io/2026-/%E5%BB%A3%E5%B3%B6%202026%20%E6%97%85%E9%81%8A%E6%89%8B%E5%86%8AV3_files/large.jpg" alt="今治城" loading="lazy"></div>
         <div class="spot-time-badge">今治 途中</div>
         <div class="spot-name">今治城</div>
         <div class="spot-en">Imabari Castle</div>
@@ -1370,7 +1645,7 @@
       </div>
 
       <div class="spot-card" data-primary="must">
-        <div class="spot-img-wrap"><img class="spot-img" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2a/92/e3/7b/132m.jpg?w=900&h=500&s=1" alt="松山城" loading="lazy"></div>
+        <div class="spot-img-wrap"><img class="spot-img" src="https://glenn543.github.io/2026-/%E5%BB%A3%E5%B3%B6%202026%20%E6%97%85%E9%81%8A%E6%89%8B%E5%86%8AV3_files/132m.jpg" alt="松山城" loading="lazy"></div>
         <div class="spot-time-badge">下午</div>
         <div class="spot-name">松山城</div>
         <div class="spot-en">Matsuyama Castle</div>
@@ -1385,7 +1660,7 @@
       </div>
 
       <div class="spot-card" data-primary="must">
-        <div class="spot-img-wrap"><img class="spot-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRy9rc1CNUSFPxrTYs84DprzRpUWvXb1yk9qA&s" alt="道後溫泉本館" loading="lazy"></div>
+        <div class="spot-img-wrap"><img class="spot-img" src="https://glenn543.github.io/2026-/%E5%BB%A3%E5%B3%B6%202026%20%E6%97%85%E9%81%8A%E6%89%8B%E5%86%8AV3_files/images" alt="道後溫泉本館" loading="lazy"></div>
         <div class="spot-time-badge">傍晚</div>
         <div class="spot-name">道後溫泉本館</div>
         <div class="spot-en">Dogo Onsen Honkan</div>
@@ -1455,7 +1730,7 @@
      
 
       <div class="spot-card" data-primary="art">
-		<div class="spot-img-wrap"><img class="spot-img" src="https://shikoku-tourism.com/image/rendering/attraction_image/40425/trim.900/3/2?v=fd11bd8232e02bf9b1a7a075421c1c90de7f59ef" alt="坂の上の雲博物館" loading="lazy"></div>
+		<div class="spot-img-wrap"><img class="spot-img" src="https://glenn543.github.io/2026-/%E5%BB%A3%E5%B3%B6%202026%20%E6%97%85%E9%81%8A%E6%89%8B%E5%86%8AV3_files/2" alt="坂の上の雲博物館" loading="lazy"></div>
         <div class="spot-time-badge">早上</div>
         <div class="spot-name">坂の上の雲博物館</div>
         <div class="spot-en">Shiba Ryotaro Memorial Museum</div>
@@ -1470,7 +1745,7 @@
       </div>
 
       <div class="spot-card" data-primary="art">
-		<div class="spot-img-wrap"><img class="spot-img" src="https://svcstrg.cld.navitime.jp/travelguide/p38010002/p38010002_01.jpg" alt="萬翠莊" loading="lazy"></div>
+		<div class="spot-img-wrap"><img class="spot-img" src="https://glenn543.github.io/2026-/%E5%BB%A3%E5%B3%B6%202026%20%E6%97%85%E9%81%8A%E6%89%8B%E5%86%8AV3_files/p38010002_01.jpg" alt="萬翠莊" loading="lazy"></div>
         <div class="spot-time-badge">早上</div>
         <div class="spot-name">萬翠莊</div>
         <div class="spot-en">Bansuiso Villa</div>
@@ -1485,7 +1760,7 @@
       </div>
 
       <div class="spot-card" data-primary="food">
-		<div class="spot-img-wrap"><img class="spot-img" src="https://shikoku-tourism.com/image/rendering/issue_page_image/74/trim.4000/4000/2000?v=5028efabce863950658a4f27c46f08e05e3b4344" alt="鯛魚料理" loading="lazy"></div>
+		<div class="spot-img-wrap"><img class="spot-img" src="https://glenn543.github.io/2026-/%E5%BB%A3%E5%B3%B6%202026%20%E6%97%85%E9%81%8A%E6%89%8B%E5%86%8AV3_files/2000" alt="鯛魚料理" loading="lazy"></div>
         <div class="spot-time-badge">午餐</div>
         <div class="spot-name">鯛魚料理</div>
         <div class="spot-en">Sea Bream (Tai) Cuisine</div>
@@ -1500,7 +1775,7 @@
       </div>
 
       <div class="spot-card" data-primary="history">
-		<div class="spot-img-wrap"><img class="spot-img" src="https://joyinhiroshima.com/uploads/2021/10/258-%E4%B8%89%E5%8E%9F%E5%9F%8E%E5%9D%80.jpg" alt="三原城跡" loading="lazy"></div>
+		<div class="spot-img-wrap"><img class="spot-img" src="https://glenn543.github.io/2026-/%E5%BB%A3%E5%B3%B6%202026%20%E6%97%85%E9%81%8A%E6%89%8B%E5%86%8AV3_files/258-三原城址.jpg" alt="三原城跡" loading="lazy"></div>
         <div class="spot-time-badge">傍晚 抵達</div>
         <div class="spot-name">三原城跡</div>
         <div class="spot-en">Mihara Castle Ruins</div>
@@ -1617,6 +1892,7 @@
   window.addEventListener('scroll', updateActiveNav, { passive: true });
   updateActiveNav();
 </script>
+
 
 
 
