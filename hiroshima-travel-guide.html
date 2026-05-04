@@ -52,6 +52,14 @@
     background: #1a1614;
   }
 
+  .hero-photo {
+    position: absolute; inset: 0;
+    background-image: url('https://images.unsplash.com/photo-1480796927426-f609979314bd?w=1600&q=80');
+    background-size: cover;
+    background-position: center 40%;
+    opacity: 0.28;
+  }
+
   .hero-pattern {
     position: absolute; inset: 0;
     background-image:
@@ -660,6 +668,16 @@
   .spot-card[data-primary="art"]      { --spot-color: #7F77DD; }
   .spot-card[data-primary="activity"] { --spot-color: #BA7517; }
 
+  .spot-img {
+    width: calc(100% + 28px);
+    margin: -14px -14px 12px -14px;
+    height: 148px;
+    object-fit: cover;
+    border-radius: 14px 14px 0 0;
+    display: block;
+    background: var(--paper-warm);
+  }
+
   /* ── FOOTER ── */
   footer {
     background: var(--ink);
@@ -703,6 +721,7 @@
 
 <!-- HERO -->
 <section class="hero">
+  <div class="hero-photo"></div>
   <div class="hero-pattern"></div>
   <div class="hero-circle hero-circle-1"></div>
   <div class="hero-circle hero-circle-2"></div>
@@ -744,29 +763,7 @@
 <!-- MAIN -->
 <main class="main">
 
-  <!-- OVERVIEW -->
-  <div class="overview-strip">
-    <div class="overview-card">
-      <div class="overview-num">8</div>
-      <div class="overview-label">Days</div>
-    </div>
-    <div class="overview-card">
-      <div class="overview-num">7</div>
-      <div class="overview-label">Nights</div>
-    </div>
-    <div class="overview-card">
-      <div class="overview-num">6</div>
-      <div class="overview-label">Cities</div>
-    </div>
-    <div class="overview-card">
-      <div class="overview-num">25+</div>
-      <div class="overview-label">Spots</div>
-    </div>
-    <div class="overview-card">
-      <div class="overview-num">70<span style="font-size:18px">km</span></div>
-      <div class="overview-label">Cycling</div>
-    </div>
-  </div>
+
 
   <!-- DAY 1 -->
   <section class="day-section" id="day1">
@@ -823,6 +820,7 @@
     <div class="spots-grid">
 
       <div class="spot-card" data-primary="must">
+        <img class="spot-img" src="https://images.unsplash.com/photo-1570789210967-2cac24afeb00?w=600&q=75" alt="原爆圓頂館" loading="lazy">
         <div class="spot-time-badge">下午</div>
         <div class="spot-name">原爆圓頂館</div>
         <div class="spot-en">Atomic Bomb Dome</div>
@@ -1053,6 +1051,7 @@
       </div>
 
       <div class="spot-card" data-primary="must">
+        <img class="spot-img" src="https://images.unsplash.com/photo-1590559899731-a382839e5549?w=600&q=75" alt="嚴島神社" loading="lazy">
         <div class="spot-time-badge">午餐後</div>
         <div class="spot-name">嚴島神社</div>
         <div class="spot-en">Itsukushima Shrine</div>
@@ -1146,6 +1145,7 @@
     <div class="spots-grid">
 
       <div class="spot-card" data-primary="must">
+        <img class="spot-img" src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=600&q=75" alt="千光寺・尾道" loading="lazy">
         <div class="spot-time-badge">下午</div>
         <div class="spot-name">千光寺</div>
         <div class="spot-en">Senkoji Temple</div>
@@ -1255,6 +1255,7 @@
       </div>
 
       <div class="spot-card" data-primary="must">
+        <img class="spot-img" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=75" alt="島波海道單車" loading="lazy">
         <div class="spot-time-badge">中途</div>
         <div class="spot-name">耕三寺・未來心の丘</div>
         <div class="spot-en">Kosanji Temple &amp; Miraishin Hill</div>
@@ -1348,6 +1349,7 @@
       </div>
 
       <div class="spot-card" data-primary="must">
+        <img class="spot-img" src="https://images.unsplash.com/photo-1576675784201-0e142b423952?w=600&q=75" alt="松山城" loading="lazy">
         <div class="spot-time-badge">下午</div>
         <div class="spot-name">松山城</div>
         <div class="spot-en">Matsuyama Castle</div>
@@ -1362,6 +1364,7 @@
       </div>
 
       <div class="spot-card" data-primary="must">
+        <img class="spot-img" src="https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=600&q=75" alt="道後溫泉本館" loading="lazy">
         <div class="spot-time-badge">傍晚</div>
         <div class="spot-name">道後溫泉本館</div>
         <div class="spot-en">Dogo Onsen Honkan</div>
@@ -1427,6 +1430,21 @@
 
     <div class="section-label" style="margin-top:1.2rem;">景點行程</div>
     <div class="spots-grid">
+
+      <div class="spot-card" data-primary="must">
+        <img class="spot-img" src="https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=600&q=75" alt="道後溫泉晨湯" loading="lazy">
+        <div class="spot-time-badge">早上</div>
+        <div class="spot-name">道後溫泉 晨湯</div>
+        <div class="spot-en">Dogo Onsen Morning Bath</div>
+        <div class="spot-desc">道後溫泉早上 6:00 開放，趁旅客少時泡晨湯，氣氛最為靜謐。推薦「椿の湯」或本館一樓神之湯，毛巾現場購買即可。</div>
+        <div class="spot-footer">
+          <div class="spot-tags"><span class="tag tag-must">必訪</span><span class="tag tag-activity">體驗</span></div>
+          <a class="spot-map-btn" href="https://maps.google.com/?q=Dogo+Onsen+Matsuyama" target="_blank">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            地圖
+          </a>
+        </div>
+      </div>
 
       <div class="spot-card" data-primary="art">
         <div class="spot-time-badge">早上</div>
