@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
-<head>
-<meta charset="UTF-8">
+<!-- saved from url=(0060)https://glenn543.github.io/2026-/hiroshima-travel-guide.html -->
+<html lang="zh-TW"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>廣島 2026 旅遊手冊 </title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;600;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="./廣島 2026 旅遊手冊V3_files/css2" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -707,6 +707,192 @@
     .day-header { gap: 14px; }
   }
 
+  /* ── AIRPORT PICKUP ── */
+  .pickup-section {
+    background: var(--paper-card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 1.4rem 1.6rem;
+    margin-bottom: 1.2rem;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .pickup-section-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 1.1rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .pickup-section-icon {
+    width: 36px;
+    height: 36px;
+    background: #E6F1FB;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+
+  .pickup-section-title {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--ink);
+  }
+
+  .pickup-section-sub {
+    font-size: 11px;
+    color: var(--ink-soft);
+    margin-top: 1px;
+  }
+
+  .pickup-group {
+    margin-bottom: 1rem;
+  }
+
+  .pickup-group:last-child { margin-bottom: 0; }
+
+  .pickup-group-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #185FA5;
+    background: #E6F1FB;
+    padding: 3px 10px 3px 8px;
+    border-radius: 6px;
+    margin-bottom: 0.75rem;
+  }
+
+  .pickup-rows { display: flex; flex-direction: column; gap: 8px; }
+
+  .pickup-row {
+    display: grid;
+    grid-template-columns: 56px 1fr auto;
+    align-items: start;
+    gap: 10px;
+    background: var(--paper-warm);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 10px 12px;
+  }
+
+  .pickup-time {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 17px;
+    font-weight: 800;
+    color: var(--red);
+    line-height: 1;
+    padding-top: 1px;
+  }
+
+  .pickup-info { flex: 1; }
+
+  .pickup-location {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--ink);
+    line-height: 1.3;
+  }
+
+  .pickup-contact {
+    font-size: 11px;
+    color: var(--ink-soft);
+    margin-top: 3px;
+  }
+
+  .pickup-contact strong {
+    color: var(--red-dark);
+  }
+
+  .pickup-alert {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 600;
+    color: #854F0B;
+    background: #FAEEDA;
+    border-radius: 4px;
+    padding: 1px 6px;
+    margin-top: 4px;
+    letter-spacing: 0.03em;
+  }
+
+  .pickup-members {
+    font-size: 10.5px;
+    color: var(--ink-muted);
+    text-align: right;
+    line-height: 1.6;
+    min-width: 90px;
+    max-width: 110px;
+  }
+
+  .pickup-members-label {
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    margin-bottom: 2px;
+  }
+
+  .pickup-count-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 10px;
+    font-weight: 500;
+    color: var(--ink-soft);
+    background: var(--paper-card);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 2px 8px;
+    margin-bottom: 6px;
+  }
+
+  .pickup-self-note {
+    font-size: 11.5px;
+    color: var(--ink-mid);
+    background: var(--paper-warm);
+    border: 1px dashed var(--border-mid);
+    border-radius: 8px;
+    padding: 8px 12px;
+    margin-top: 6px;
+    line-height: 1.6;
+  }
+
+  .pickup-members-inline {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-top: 6px;
+  }
+
+  .pickup-member-chip {
+    font-size: 10.5px;
+    font-weight: 400;
+    color: var(--ink-mid);
+    background: var(--paper-card);
+    border: 1px solid var(--border-mid);
+    border-radius: 20px;
+    padding: 2px 9px;
+    white-space: nowrap;
+  }
+
+  @media (max-width: 600px) {
+    .pickup-row {
+      grid-template-columns: 48px 1fr;
+    }
+    .pickup-members { display: none; }
+  }
+
   /* ── FADE IN ANIMATION ── */
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(20px); }
@@ -756,14 +942,14 @@
 <nav class="nav">
   <div class="nav-brand">廣島 2026</div>
   <div class="nav-links">
-    <a class="nav-link" href="#day1">5/17</a>
-    <a class="nav-link" href="#day2">5/18</a>
-    <a class="nav-link" href="#day3">5/19</a>
-    <a class="nav-link" href="#day4">5/20</a>
-    <a class="nav-link" href="#day5">5/21</a>
-    <a class="nav-link" href="#day6">5/22</a>
-    <a class="nav-link" href="#day7">5/23</a>
-    <a class="nav-link" href="#day8">5/24</a>
+    <a class="nav-link" href="file:///C:/Users/user/Downloads/hiroshima-travel-guide_2.html#day1">5/17</a>
+    <a class="nav-link" href="file:///C:/Users/user/Downloads/hiroshima-travel-guide_2.html#day2">5/18</a>
+    <a class="nav-link" href="file:///C:/Users/user/Downloads/hiroshima-travel-guide_2.html#day3">5/19</a>
+    <a class="nav-link" href="file:///C:/Users/user/Downloads/hiroshima-travel-guide_2.html#day4">5/20</a>
+    <a class="nav-link" href="file:///C:/Users/user/Downloads/hiroshima-travel-guide_2.html#day5">5/21</a>
+    <a class="nav-link" href="file:///C:/Users/user/Downloads/hiroshima-travel-guide_2.html#day6">5/22</a>
+    <a class="nav-link" href="file:///C:/Users/user/Downloads/hiroshima-travel-guide_2.html#day7">5/23</a>
+    <a class="nav-link" href="file:///C:/Users/user/Downloads/hiroshima-travel-guide_2.html#day8">5/24</a>
   </div>
 </nav>
 
@@ -773,7 +959,227 @@
 
 
   <!-- DAY 1 -->
-  <section class="day-section" id="day1">
+  <section class="day-section visible" id="day1">
+    <div class="day-header">
+      <div class="day-badge">
+        <span class="day-badge-date">5/17</span>
+        <span class="day-badge-day">SUN</span>
+      </div>
+      <div class="day-header-text">
+        <div class="day-num-label">Day 1</div>
+        <h2 class="day-title">抵達廣島</h2>
+        <span class="day-region-badge r-hiroshima">廣島市</span>
+      </div>
+    </div>
+
+    <!-- AIRPORT PICKUP SECTION -->
+    <div class="pickup-section">
+      <div class="pickup-section-header">
+        <div class="pickup-section-icon">🚐</div>
+        <div>
+          <div class="pickup-section-title">機場接送安排</div>
+          <div class="pickup-section-sub">出發日 5/17 · 桃園機場集合，共三車</div>
+        </div>
+      </div>
+
+      <!-- Car 1: Taipei -->
+      <div class="pickup-group">
+        <div class="pickup-group-label">🚗 第一車 · 台北出發 · 6人</div>
+        <div class="pickup-rows">
+          <div class="pickup-row">
+            <div class="pickup-time">4:00</div>
+            <div class="pickup-info">
+              <div class="pickup-location">辛亥</div>
+              <div class="pickup-contact">聯絡人：<strong>Hauzhen</strong></div>
+              <span class="pickup-count-badge">🧑‍🤝‍🧑 接送 2 人</span>
+              <div class="pickup-members-inline">
+                <span class="pickup-member-chip">Hauzhen</span>
+                <span class="pickup-member-chip">qin</span>
+              </div>
+            </div>
+          </div>
+          <div class="pickup-row">
+            <div class="pickup-time">4:15</div>
+            <div class="pickup-info">
+              <div class="pickup-location">光復南路</div>
+              <div class="pickup-contact">聯絡人：<strong>Jay Tseng</strong></div>
+              <span class="pickup-alert">⚠️ 報「王先生」</span>
+              <span class="pickup-count-badge" style="margin-left:0;">🧑‍🤝‍🧑 接送 5 人</span>
+              <div class="pickup-members-inline">
+                <span class="pickup-member-chip">XiaoRu</span>
+                <span class="pickup-member-chip">Jay Tseng</span>
+                <span class="pickup-member-chip">Pei-Shan Hung</span>
+                <span class="pickup-member-chip">蝌蚪</span>
+                <span class="pickup-member-chip">曼巴</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Car 2: Taipei -->
+      <div class="pickup-group">
+        <div class="pickup-group-label">🚗 第二車 · 台北出發 · 4人</div>
+        <div class="pickup-rows">
+          <div class="pickup-row">
+            <div class="pickup-time">4:00</div>
+            <div class="pickup-info">
+              <div class="pickup-location">東湖</div>
+              <div class="pickup-contact">聯絡人：<strong>Prolong Lai</strong></div>
+              <span class="pickup-count-badge">🧑‍🤝‍🧑 接送 2 人</span>
+              <div class="pickup-members-inline">
+                <span class="pickup-member-chip">Prolong Lai</span>
+                <span class="pickup-member-chip">littleherry</span>
+              </div>
+            </div>
+          </div>
+          <div class="pickup-row">
+            <div class="pickup-time">4:15</div>
+            <div class="pickup-info">
+              <div class="pickup-location">光復南路</div>
+              <div class="pickup-contact">聯絡人：<strong>阿蓓</strong></div>
+              <span class="pickup-alert">⚠️ 報「倪小姐」</span>
+              <span class="pickup-count-badge" style="margin-left:0;">🧑‍🤝‍🧑 接送 2 人</span>
+              <div class="pickup-members-inline">
+                <span class="pickup-member-chip">alex</span>
+                <span class="pickup-member-chip">阿蓓</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Car 3: Hsinchu - self-arranged -->
+      <div class="pickup-group">
+        <div class="pickup-group-label">🚗 第三團 · 新竹出發 · 4人</div>
+        <div class="pickup-rows">
+          <div class="pickup-self-note">
+            🗺️ <strong>4:00</strong>　Glenn、Yen 兩人各自前往機場集合<br>
+            🗺️ <strong>4:00</strong>　ida、IO 兩人各自前往機場集合
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flight-card">
+      <div class="flight-endpoint">
+        <div class="flight-time">7:15</div>
+        <div class="flight-city">桃園 TPE</div>
+      </div>
+      <div class="flight-mid">
+        <div class="flight-airline">中華航空 CI</div>
+        <div class="flight-line-wrap">
+          <div class="flight-hr"></div>
+          <span class="flight-plane">✈</span>
+          <div class="flight-hr"></div>
+        </div>
+        <div style="font-size:10px;color:var(--ink-muted);">約 1h 20m</div>
+      </div>
+      <div class="flight-endpoint" style="text-align:right;">
+        <div class="flight-time">10:35</div>
+        <div class="flight-city" style="text-align:right;">廣島 HIJ</div>
+      </div>
+    </div>
+
+    <div class="transport-bar">
+      <span class="transport-icon">🚌</span>
+      廣島機場 → 市區廣島巴士中心 約 45 分，或搭計程車約 35 分
+    </div>
+
+    <div class="hotel-card">
+      <div class="hotel-icon-wrap">🏨</div>
+      <div>
+        <div class="hotel-name">Quintessa Hotel 広島銀山町</div>
+        <div class="hotel-addr">〒730-0022 広島県広島市中区銀山町10-17</div>
+        <a class="hotel-map-link" href="https://maps.google.com/?q=Quintessa+Hotel+Hiroshima+Ginzanmachi" target="_blank">
+          <svg viewBox="0 0 24 24" fill="#4285f4" width="12" height="12"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path></svg>
+          Google Maps
+        </a>
+      </div>
+    </div>
+
+    <div class="section-label">推薦景點</div>
+    <div class="spots-grid">
+
+      <div class="spot-card" data-primary="must">
+        <div class="spot-img-wrap"><img class="spot-img" src="https://glenn543.github.io/2026-/%E5%BB%A3%E5%B3%B6%202026%20%E6%97%85%E9%81%8A%E6%89%8B%E5%86%8AV3_files/hiroshimapeacememorialpark_078404ed17aaf1b212072d1ddaca6ba2_m.jpg.webp" alt="原爆圓頂館" loading="lazy"></div>
+        <div class="spot-time-badge">下午</div>
+        <div class="spot-name">原爆圓頂館</div>
+        <div class="spot-en">Atomic Bomb Dome</div>
+        <div class="spot-desc">UNESCO 世界遺產，廣島最重要的歷史地標。1945 年原子彈爆炸後保留下來的工業展示廳遺跡，無聲訴說戰爭的殘酷。</div>
+        <div class="spot-footer">
+          <div class="spot-tags"><span class="tag tag-must">必訪</span><span class="tag tag-history">歷史</span></div>
+          <a class="spot-map-btn" href="https://maps.google.com/?q=Atomic+Bomb+Dome+Hiroshima" target="_blank">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path></svg>
+            地圖
+          </a>
+        </div>
+      </div>
+
+      <div class="spot-card" data-primary="must">
+		<div class="spot-img-wrap"><img class="spot-img" src="https://glenn543.github.io/2026-/%E5%BB%A3%E5%B3%B6%202026%20%E6%97%85%E9%81%8A%E6%89%8B%E5%86%8AV3_files/Featured-image-Hiroshima-Peace-Memorial-Park-1244x700.jpg" alt="廣島和平紀念公園" loading="lazy"></div>
+        <div class="spot-time-badge">下午</div>
+        <div class="spot-name">廣島和平紀念公園</div>
+        <div class="spot-en">Peace Memorial Park</div>
+        <div class="spot-desc">與原爆圓頂館相鄰的廣大公園，設有慰靈碑、和平之鐘與原爆死難者名冊，氛圍莊嚴靜謐，適合漫步沉思。</div>
+        <div class="spot-footer">
+          <div class="spot-tags"><span class="tag tag-must">必訪</span><span class="tag tag-history">歷史</span></div>
+          <a class="spot-map-btn" href="https://maps.google.com/?q=Hiroshima+Peace+Memorial+Park" target="_blank">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path></svg>
+            地圖
+          </a>
+        </div>
+      </div>
+
+      <div class="spot-card" data-primary="history">
+        <div class="spot-img-wrap"><img class="spot-img" src="https://glenn543.github.io/2026-/%E5%BB%A3%E5%B3%B6%202026%20%E6%97%85%E9%81%8A%E6%89%8B%E5%86%8AV3_files/廣島和平紀念資料館常設展覽門票-Klook客路.jpg" alt="和平紀念資料館" loading="lazy"></div>
+        <div class="spot-time-badge">下午</div>
+        <div class="spot-name">和平紀念資料館</div>
+        <div class="spot-en">Peace Memorial Museum</div>
+        <div class="spot-desc">館內詳細展示廣島原爆前後的歷史，展品包含受害者遺物與親歷記錄，震撼人心，建議預留 1.5 小時，入場費 200 円。</div>
+        <div class="spot-footer">
+          <div class="spot-tags"><span class="tag tag-history">歷史</span></div>
+          <a class="spot-map-btn" href="https://maps.google.com/?q=Hiroshima+Peace+Memorial+Museum" target="_blank">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path></svg>
+            地圖
+          </a>
+        </div>
+      </div>
+
+      <div class="spot-card" data-primary="food">
+        <div class="spot-time-badge">傍晚</div>
+        <div class="spot-name">本通商店街</div>
+        <div class="spot-en">Hondori Shopping Street</div>
+        <div class="spot-desc">廣島市區最熱鬧的拱廊商店街，從藥妝店、伴手禮到咖啡廳一應俱全，輕鬆採購廣島必買名產。</div>
+        <div class="spot-footer">
+          <div class="spot-tags"><span class="tag tag-food">美食</span></div>
+          <a class="spot-map-btn" href="https://maps.google.com/?q=Hondori+Shopping+Street+Hiroshima" target="_blank">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path></svg>
+            地圖
+          </a>
+        </div>
+      </div>
+
+      <div class="spot-card" data-primary="must">
+        <div class="spot-time-badge">晚餐</div>
+        <div class="spot-name">廣島燒 お好み村</div>
+        <div class="spot-en">Okonomimura Village</div>
+        <div class="spot-desc">六層樓、數十家廣島燒名店匯聚的大阪燒村，每家口味略有不同，現點現做，廣島必吃體驗！</div>
+        <div class="spot-footer">
+          <div class="spot-tags"><span class="tag tag-must">必訪</span><span class="tag tag-food">美食</span></div>
+          <a class="spot-map-btn" href="https://maps.google.com/?q=Okonomimura+Hiroshima" target="_blank">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path></svg>
+            地圖
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- DAY 1 -->
+  <section class="day-section visible" id="day1">
     <div class="day-header">
       <div class="day-badge">
         <span class="day-badge-date">5/17</span>
@@ -817,7 +1223,7 @@
         <div class="hotel-name">Quintessa Hotel 広島銀山町</div>
         <div class="hotel-addr">〒730-0022 広島県広島市中区銀山町10-17</div>
         <a class="hotel-map-link" href="https://maps.google.com/?q=Quintessa+Hotel+Hiroshima+Ginzanmachi" target="_blank">
-          <svg viewBox="0 0 24 24" fill="#4285f4" width="12" height="12"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          <svg viewBox="0 0 24 24" fill="#4285f4" width="12" height="12"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path></svg>
           Google Maps
         </a>
       </div>
@@ -835,13 +1241,14 @@
         <div class="spot-footer">
           <div class="spot-tags"><span class="tag tag-must">必訪</span><span class="tag tag-history">歷史</span></div>
           <a class="spot-map-btn" href="https://maps.google.com/?q=Atomic+Bomb+Dome+Hiroshima" target="_blank">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path></svg>
             地圖
           </a>
         </div>
       </div>
 
       <div class="spot-card" data-primary="must">
+		<div class="spot-img-wrap"><img class="spot-img" src="https://www.agoda.com/wp-content/uploads/2024/01/Featured-image-Hiroshima-Peace-Memorial-Park-1244x700.jpg" alt="廣島和平紀念公園" loading="lazy"></div>
         <div class="spot-time-badge">下午</div>
         <div class="spot-name">廣島和平紀念公園</div>
         <div class="spot-en">Peace Memorial Park</div>
@@ -849,7 +1256,7 @@
         <div class="spot-footer">
           <div class="spot-tags"><span class="tag tag-must">必訪</span><span class="tag tag-history">歷史</span></div>
           <a class="spot-map-btn" href="https://maps.google.com/?q=Hiroshima+Peace+Memorial+Park" target="_blank">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path></svg>
             地圖
           </a>
         </div>
@@ -864,7 +1271,7 @@
         <div class="spot-footer">
           <div class="spot-tags"><span class="tag tag-history">歷史</span></div>
           <a class="spot-map-btn" href="https://maps.google.com/?q=Hiroshima+Peace+Memorial+Museum" target="_blank">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path></svg>
             地圖
           </a>
         </div>
@@ -878,7 +1285,7 @@
         <div class="spot-footer">
           <div class="spot-tags"><span class="tag tag-food">美食</span></div>
           <a class="spot-map-btn" href="https://maps.google.com/?q=Hondori+Shopping+Street+Hiroshima" target="_blank">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path></svg>
             地圖
           </a>
         </div>
@@ -892,7 +1299,7 @@
         <div class="spot-footer">
           <div class="spot-tags"><span class="tag tag-must">必訪</span><span class="tag tag-food">美食</span></div>
           <a class="spot-map-btn" href="https://maps.google.com/?q=Okonomimura+Hiroshima" target="_blank">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path></svg>
             地圖
           </a>
         </div>
@@ -902,7 +1309,7 @@
   </section>
 
   <!-- DAY 2 -->
-  <section class="day-section" id="day2">
+  <section class="day-section visible" id="day2">
     <div class="day-header">
       <div class="day-badge">
         <span class="day-badge-date">5/18</span>
@@ -926,7 +1333,7 @@
         <div class="hotel-name">Quintessa Hotel 広島銀山町（連住）</div>
         <div class="hotel-addr">〒730-0022 広島県広島市中区銀山町10-17</div>
         <a class="hotel-map-link" href="https://maps.google.com/?q=Quintessa+Hotel+Hiroshima+Ginzanmachi" target="_blank">
-          <svg viewBox="0 0 24 24" fill="#4285f4" width="12" height="12"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          <svg viewBox="0 0 24 24" fill="#4285f4" width="12" height="12"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path></svg>
           Google Maps
         </a>
       </div>
@@ -936,6 +1343,7 @@
     <div class="spots-grid">
 
       <div class="spot-card" data-primary="must">
+		<div class="spot-img-wrap"><img class="spot-img" src="https://www.mazda.com.tw/globalassets/mazda/mazda-stories/08_-mazda-/mazda_stories_2.jpg" alt="Mazda 博物館" loading="lazy"></div>
         <div class="spot-time-badge">9:00</div>
         <div class="spot-name">Mazda 博物館</div>
         <div class="spot-en">Mazda Museum</div>
@@ -943,13 +1351,14 @@
         <div class="spot-footer">
           <div class="spot-tags"><span class="tag tag-must">必訪</span><span class="tag tag-activity">體驗</span></div>
           <a class="spot-map-btn" href="https://maps.google.com/?q=Mazda+Museum+Hiroshima" target="_blank">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path></svg>
             地圖
           </a>
         </div>
       </div>
 
       <div class="spot-card" data-primary="must">
+		<div class="spot-img-wrap"><img class="spot-img" src="https://cdn.japan-travel-note.com/images/00106/thumbnail-en-541x284.webp" alt="大和博物館" loading="lazy"></div>
         <div class="spot-time-badge">13:00</div>
         <div class="spot-name">大和博物館</div>
         <div class="spot-en">Yamato Museum, Kure</div>
@@ -957,13 +1366,14 @@
         <div class="spot-footer">
           <div class="spot-tags"><span class="tag tag-must">必訪</span><span class="tag tag-history">歷史</span></div>
           <a class="spot-map-btn" href="https://maps.google.com/?q=Yamato+Museum+Kure" target="_blank">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path></svg>
             地圖
           </a>
         </div>
       </div>
 
       <div class="spot-card" data-primary="must">
+		<div class="spot-img-wrap"><img class="spot-img" src="https://static.gltjp.com/glt/data/directory/13000/12506/20220109_114250_94b09204_w1920.webp" alt="鐵のくじら館" loading="lazy"></div>
         <div class="spot-time-badge">14:30</div>
         <div class="spot-name">鐵のくじら館</div>
         <div class="spot-en">Iron Whale Museum</div>
@@ -971,7 +1381,7 @@
         <div class="spot-footer">
           <div class="spot-tags"><span class="tag tag-must">必訪</span><span class="tag tag-history">歷史</span></div>
           <a class="spot-map-btn" href="https://maps.google.com/?q=Iron+Whale+Museum+Kure+Japan" target="_blank">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path></svg>
             地圖
           </a>
         </div>
@@ -985,7 +1395,7 @@
         <div class="spot-footer">
           <div class="spot-tags"><span class="tag tag-history">歷史</span></div>
           <a class="spot-map-btn" href="https://maps.google.com/?q=Irifuneyama+Memorial+Museum+Kure" target="_blank">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path></svg>
             地圖
           </a>
         </div>
@@ -999,7 +1409,7 @@
         <div class="spot-footer">
           <div class="spot-tags"><span class="tag tag-nature">自然</span></div>
           <a class="spot-map-btn" href="https://maps.google.com/?q=Kure+Port+Hiroshima" target="_blank">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path></svg>
             地圖
           </a>
         </div>
@@ -1009,7 +1419,7 @@
   </section>
 
   <!-- DAY 3 -->
-  <section class="day-section" id="day3">
+  <section class="day-section visible" id="day3">
     <div class="day-header">
       <div class="day-badge">
         <span class="day-badge-date">5/19</span>
@@ -1033,7 +1443,7 @@
         <div class="hotel-name">Quintessa Hotel 広島銀山町（連住）</div>
         <div class="hotel-addr">〒730-0022 広島県広島市中区銀山町10-17</div>
         <a class="hotel-map-link" href="https://maps.google.com/?q=Quintessa+Hotel+Hiroshima+Ginzanmachi" target="_blank">
-          <svg viewBox="0 0 24 24" fill="#4285f4" width="12" height="12"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          <svg viewBox="0 0 24 24" fill="#4285f4" width="12" height="12"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path></svg>
           Google Maps
         </a>
       </div>
@@ -1045,6 +1455,7 @@
     <div class="spots-grid">
 
       <div class="spot-card" data-primary="must">
+		<div class="spot-img-wrap"><img class="spot-img" src="https://image-cdn.hypb.st/https%3A%2F%2Fpopbee.com%2Fimage%2F2024%2F12%2Fthe-worlds-most-beautiful-museums-simose-art-museum-hiroshima-japan15.jpg?w=1260&cbr=1&q=90&fit=max" alt="下瀨美術館" loading="lazy"></div>
         <div class="spot-time-badge">9:30</div>
         <div class="spot-name">下瀨美術館</div>
         <div class="spot-en">Kage Museum of Art</div>
@@ -1052,7 +1463,7 @@
         <div class="spot-footer">
           <div class="spot-tags"><span class="tag tag-must">必訪</span><span class="tag tag-art">藝術</span></div>
           <a class="spot-map-btn" href="https://maps.google.com/?q=Shimonoseki+Museum+of+Art+Kage+Hiroshima" target="_blank">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path></svg>
             地圖
           </a>
         </div>
@@ -1067,13 +1478,14 @@
         <div class="spot-footer">
           <div class="spot-tags"><span class="tag tag-must">必訪</span><span class="tag tag-history">歷史</span></div>
           <a class="spot-map-btn" href="https://maps.google.com/?q=Itsukushima+Shrine+Miyajima" target="_blank">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path></svg>
             地圖
           </a>
         </div>
       </div>
 
       <div class="spot-card" data-primary="food">
+		<div class="spot-img-wrap"><img class="spot-img" src="https://pic.pimg.tw/immegumi/1681055791-3233555511-g_l.jpg" alt="牡蠣料理街" loading="lazy"></div>
         <div class="spot-time-badge">午餐</div>
         <div class="spot-name">牡蠣料理街</div>
         <div class="spot-en">Oyster Street, Miyajima</div>
@@ -1081,13 +1493,14 @@
         <div class="spot-footer">
           <div class="spot-tags"><span class="tag tag-must">必訪</span><span class="tag tag-food">美食</span></div>
           <a class="spot-map-btn" href="https://maps.google.com/?q=Miyajima+Oyster+Street" target="_blank">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path></svg>
             地圖
           </a>
         </div>
       </div>
 
       <div class="spot-card" data-primary="history">
+		<div class="spot-img-wrap"><img class="spot-img" src="https://tw.tabiiro.travel/lpimg/leisure/206381/main/img4.jpg" alt="大聖院" loading="lazy"></div>
         <div class="spot-time-badge">下午</div>
         <div class="spot-name">大聖院</div>
         <div class="spot-en">Daisho-in Temple</div>
@@ -1095,13 +1508,14 @@
         <div class="spot-footer">
           <div class="spot-tags"><span class="tag tag-history">歷史</span></div>
           <a class="spot-map-btn" href="https://maps.google.com/?q=Daisho-in+Temple+Miyajima" target="_blank">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path></svg>
             地圖
           </a>
         </div>
       </div>
 
       <div class="spot-card" data-primary="nature">
+		<div class="spot-img-wrap"><img class="spot-img" src="https://cdn-ak.f.st-hatena.com/images/fotolife/b/burariwalking/20250728/20250728114143.jpg" alt="彌山登山" loading="lazy"></div>
         <div class="spot-time-badge">下午</div>
         <div class="spot-name">彌山登山</div>
         <div class="spot-en">Mt. Misen Hiking</div>
@@ -1109,7 +1523,7 @@
         <div class="spot-footer">
           <div class="spot-tags"><span class="tag tag-nature">自然</span><span class="tag tag-activity">體驗</span></div>
           <a class="spot-map-btn" href="https://maps.google.com/?q=Mount+Misen+Miyajima" target="_blank">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path></svg>
             地圖
           </a>
         </div>
@@ -1119,7 +1533,7 @@
   </section>
 
   <!-- DAY 4 -->
-  <section class="day-section" id="day4">
+  <section class="day-section visible" id="day4">
     <div class="day-header">
       <div class="day-badge">
         <span class="day-badge-date">5/20</span>
@@ -1143,7 +1557,7 @@
         <div class="hotel-name">尾道 Royal Hotel（皇家飯店）</div>
         <div class="hotel-addr">〒722-0035 広島県尾道市土堂2-9-27 海岸通り住吉神社前</div>
         <a class="hotel-map-link" href="https://maps.google.com/?q=Onomichi+Royal+Hotel+Hiroshima" target="_blank">
-          <svg viewBox="0 0 24 24" fill="#4285f4" width="12" height="12"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          <svg viewBox="0 0 24 24" fill="#4285f4" width="12" height="12"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path></svg>
           Google Maps
         </a>
       </div>
@@ -1161,13 +1575,14 @@
         <div class="spot-footer">
           <div class="spot-tags"><span class="tag tag-must">必訪</span><span class="tag tag-nature">自然</span></div>
           <a class="spot-map-btn" href="https://maps.google.com/?q=Senkoji+Temple+Onomichi" target="_blank">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path></svg>
             地圖
           </a>
         </div>
       </div>
 
       <div class="spot-card" data-primary="must">
+		<div class="spot-img-wrap"><img class="spot-img" src="https://www.onomichi-hansei.com/sightseeing/item/nekonohosomichi.jpg" alt="貓之細道" loading="lazy"></div>
         <div class="spot-time-badge">下午</div>
         <div class="spot-name">貓之細道</div>
         <div class="spot-en">Cat's Alley</div>
@@ -1175,13 +1590,14 @@
         <div class="spot-footer">
           <div class="spot-tags"><span class="tag tag-must">必訪</span><span class="tag tag-art">藝術</span></div>
           <a class="spot-map-btn" href="https://maps.google.com/?q=Cat+Alley+Onomichi+Neko+no+Hosomichi" target="_blank">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path></svg>
             地圖
           </a>
         </div>
       </div>
 
       <div class="spot-card" data-primary="food">
+		<div class="spot-img-wrap"><img class="spot-img" src="https://resources.matcha-jp.com/resize/720x2000/2019/08/30-84939.webp" alt="尾道本通り商店街" loading="lazy"></div>
         <div class="spot-time-badge">下午</div>
         <div class="spot-name">尾道本通り商店街</div>
         <div class="spot-en">Onomichi Hondori</div>
@@ -1189,7 +1605,7 @@
         <div class="spot-footer">
           <div class="spot-tags"><span class="tag tag-food">美食</span></div>
           <a class="spot-map-btn" href="https://maps.google.com/?q=Onomichi+Hondori+Shopping+Street" target="_blank">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path></svg>
             地圖
           </a>
         </div>
@@ -1203,7 +1619,7 @@
         <div class="spot-footer">
           <div class="spot-tags"><span class="tag tag-nature">自然</span></div>
           <a class="spot-map-btn" href="https://maps.google.com/?q=Onomichi+Ferry+Port+Hiroshima" target="_blank">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path></svg>
             地圖
           </a>
         </div>
@@ -1213,7 +1629,7 @@
   </section>
 
   <!-- DAY 5 -->
-  <section class="day-section" id="day5">
+  <section class="day-section visible" id="day5">
     <div class="day-header">
       <div class="day-badge" style="background:var(--red);">
         <span class="day-badge-date">5/21</span>
@@ -1237,7 +1653,7 @@
         <div class="hotel-name">島宿 農と凪（大通鋪）</div>
         <div class="hotel-addr">〒794-1402 愛媛県今治市上浦町井口6376</div>
         <a class="hotel-map-link" href="https://maps.google.com/?q=Shimajuku+Noto+Nagi+Imabari+Ehime" target="_blank">
-          <svg viewBox="0 0 24 24" fill="#4285f4" width="12" height="12"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          <svg viewBox="0 0 24 24" fill="#4285f4" width="12" height="12"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path></svg>
           Google Maps
         </a>
       </div>
@@ -1256,14 +1672,14 @@
         <div class="spot-footer">
           <div class="spot-tags"><span class="tag tag-food">美食</span></div>
           <a class="spot-map-btn" href="https://maps.google.com/?q=Mukaishima+Island+Onomichi" target="_blank">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path></svg>
             地圖
           </a>
         </div>
       </div>
 
       <div class="spot-card" data-primary="must">
-        <div class="spot-img-wrap"><img class="spot-img" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=75" alt="島波海道單車" loading="lazy"></div>
+        <div class="spot-img-wrap"><img class="spot-img" src="https://img.cooljapan-videos.com/r/1000x666/files/article_images/6a1abbbe8a7ffae8c4e7aa9e7c910827eb6a4620.jpg.webp" alt="耕三寺・未來心の丘" loading="lazy"></div>
         <div class="spot-time-badge">中途</div>
         <div class="spot-name">耕三寺・未來心の丘</div>
         <div class="spot-en">Kosanji Temple &amp; Miraishin Hill</div>
@@ -1271,13 +1687,14 @@
         <div class="spot-footer">
           <div class="spot-tags"><span class="tag tag-must">必訪</span><span class="tag tag-art">藝術</span></div>
           <a class="spot-map-btn" href="https://maps.google.com/?q=Kosanji+Temple+Setoda+Oshima" target="_blank">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path></svg>
             地圖
           </a>
         </div>
       </div>
 
       <div class="spot-card" data-primary="food">
+		<div class="spot-img-wrap"><img class="spot-img" src="https://image.dive-hiroshima.com/wp-content/uploads/2022/01/18-12-1024x521.jpg" alt="瀨戶田 檸檬料理" loading="lazy"></div>
         <div class="spot-time-badge">午餐</div>
         <div class="spot-name">瀨戶田 檸檬料理</div>
         <div class="spot-en">Setoda Lemon Cuisine</div>
@@ -1285,13 +1702,14 @@
         <div class="spot-footer">
           <div class="spot-tags"><span class="tag tag-must">必訪</span><span class="tag tag-food">美食</span></div>
           <a class="spot-map-btn" href="https://maps.google.com/?q=Setoda+Ikuchijima+Island+Hiroshima" target="_blank">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path></svg>
             地圖
           </a>
         </div>
       </div>
 
       <div class="spot-card" data-primary="history">
+		<div class="spot-img-wrap"><img class="spot-img" src="https://momijiaoi.net/wp-content/uploads/2021/06/ooyamadumi2020032940.jpg" alt="大山祇神社" loading="lazy"></div>
         <div class="spot-time-badge">抵達</div>
         <div class="spot-name">大山祇神社</div>
         <div class="spot-en">Oyamazumi Shrine</div>
@@ -1299,7 +1717,7 @@
         <div class="spot-footer">
           <div class="spot-tags"><span class="tag tag-history">歷史</span></div>
           <a class="spot-map-btn" href="https://maps.google.com/?q=Oyamazumi+Shrine+Omishima+Ehime" target="_blank">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path></svg>
             地圖
           </a>
         </div>
@@ -1309,7 +1727,7 @@
   </section>
 
   <!-- DAY 6 -->
-  <section class="day-section" id="day6">
+  <section class="day-section visible" id="day6">
     <div class="day-header">
       <div class="day-badge">
         <span class="day-badge-date">5/22</span>
@@ -1333,7 +1751,7 @@
         <div class="hotel-name">Comfort Hotel 松山</div>
         <div class="hotel-addr">〒790-0005 愛媛県松山市花園町3-18</div>
         <a class="hotel-map-link" href="https://maps.google.com/?q=Comfort+Hotel+Matsuyama+Ehime" target="_blank">
-          <svg viewBox="0 0 24 24" fill="#4285f4" width="12" height="12"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          <svg viewBox="0 0 24 24" fill="#4285f4" width="12" height="12"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path></svg>
           Google Maps
         </a>
       </div>
@@ -1343,6 +1761,7 @@
     <div class="spots-grid">
 
       <div class="spot-card" data-primary="history">
+		<div class="spot-img-wrap"><img class="spot-img" src="https://hit-product-resources-public.s3.ap-northeast-1.amazonaws.com/images/2408/XKaY2vfittosnhTO9nb9/large.jpg" alt="今治城" loading="lazy"></div>
         <div class="spot-time-badge">今治 途中</div>
         <div class="spot-name">今治城</div>
         <div class="spot-en">Imabari Castle</div>
@@ -1350,14 +1769,14 @@
         <div class="spot-footer">
           <div class="spot-tags"><span class="tag tag-history">歷史</span></div>
           <a class="spot-map-btn" href="https://maps.google.com/?q=Imabari+Castle+Ehime" target="_blank">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path></svg>
             地圖
           </a>
         </div>
       </div>
 
       <div class="spot-card" data-primary="must">
-        <div class="spot-img-wrap"><img class="spot-img" src="https://images.unsplash.com/photo-1576675784201-0e142b423952?w=600&q=75" alt="松山城" loading="lazy"></div>
+        <div class="spot-img-wrap"><img class="spot-img" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2a/92/e3/7b/132m.jpg?w=900&h=500&s=1" alt="松山城" loading="lazy"></div>
         <div class="spot-time-badge">下午</div>
         <div class="spot-name">松山城</div>
         <div class="spot-en">Matsuyama Castle</div>
@@ -1365,14 +1784,14 @@
         <div class="spot-footer">
           <div class="spot-tags"><span class="tag tag-must">必訪</span><span class="tag tag-history">歷史</span></div>
           <a class="spot-map-btn" href="https://maps.google.com/?q=Matsuyama+Castle+Ehime" target="_blank">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path></svg>
             地圖
           </a>
         </div>
       </div>
 
       <div class="spot-card" data-primary="must">
-        <div class="spot-img-wrap"><img class="spot-img" src="https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=600&q=75" alt="道後溫泉本館" loading="lazy"></div>
+        <div class="spot-img-wrap"><img class="spot-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRy9rc1CNUSFPxrTYs84DprzRpUWvXb1yk9qA&s" alt="道後溫泉本館" loading="lazy"></div>
         <div class="spot-time-badge">傍晚</div>
         <div class="spot-name">道後溫泉本館</div>
         <div class="spot-en">Dogo Onsen Honkan</div>
@@ -1380,7 +1799,7 @@
         <div class="spot-footer">
           <div class="spot-tags"><span class="tag tag-must">必訪</span><span class="tag tag-activity">體驗</span></div>
           <a class="spot-map-btn" href="https://maps.google.com/?q=Dogo+Onsen+Honkan+Matsuyama" target="_blank">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path></svg>
             地圖
           </a>
         </div>
@@ -1394,7 +1813,7 @@
         <div class="spot-footer">
           <div class="spot-tags"><span class="tag tag-food">美食</span></div>
           <a class="spot-map-btn" href="https://maps.google.com/?q=Dogo+Onsen+Shopping+Street+Matsuyama" target="_blank">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path></svg>
             地圖
           </a>
         </div>
@@ -1404,7 +1823,7 @@
   </section>
 
   <!-- DAY 7 -->
-  <section class="day-section" id="day7">
+  <section class="day-section visible" id="day7">
     <div class="day-header">
       <div class="day-badge">
         <span class="day-badge-date">5/23</span>
@@ -1428,7 +1847,7 @@
         <div class="hotel-name">Super Hotel 三原駅前</div>
         <div class="hotel-addr">〒723-0014 広島県三原市城町1-12-10</div>
         <a class="hotel-map-link" href="https://maps.google.com/?q=Super+Hotel+Mihara+Station+Hiroshima" target="_blank">
-          <svg viewBox="0 0 24 24" fill="#4285f4" width="12" height="12"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          <svg viewBox="0 0 24 24" fill="#4285f4" width="12" height="12"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path></svg>
           Google Maps
         </a>
       </div>
@@ -1439,22 +1858,10 @@
     <div class="section-label" style="margin-top:1.2rem;">景點行程</div>
     <div class="spots-grid">
 
-      <div class="spot-card" data-primary="must">
-        <div class="spot-img-wrap"><img class="spot-img" src="https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=600&q=75" alt="道後溫泉晨湯" loading="lazy"></div>
-        <div class="spot-time-badge">早上</div>
-        <div class="spot-name">道後溫泉 晨湯</div>
-        <div class="spot-en">Dogo Onsen Morning Bath</div>
-        <div class="spot-desc">道後溫泉早上 6:00 開放，趁旅客少時泡晨湯，氣氛最為靜謐。推薦「椿の湯」或本館一樓神之湯，毛巾現場購買即可。</div>
-        <div class="spot-footer">
-          <div class="spot-tags"><span class="tag tag-must">必訪</span><span class="tag tag-activity">體驗</span></div>
-          <a class="spot-map-btn" href="https://maps.google.com/?q=Dogo+Onsen+Matsuyama" target="_blank">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-            地圖
-          </a>
-        </div>
-      </div>
+     
 
       <div class="spot-card" data-primary="art">
+		<div class="spot-img-wrap"><img class="spot-img" src="https://shikoku-tourism.com/image/rendering/attraction_image/40425/trim.900/3/2?v=fd11bd8232e02bf9b1a7a075421c1c90de7f59ef" alt="坂の上の雲博物館" loading="lazy"></div>
         <div class="spot-time-badge">早上</div>
         <div class="spot-name">坂の上の雲博物館</div>
         <div class="spot-en">Shiba Ryotaro Memorial Museum</div>
@@ -1462,13 +1869,14 @@
         <div class="spot-footer">
           <div class="spot-tags"><span class="tag tag-art">藝術</span><span class="tag tag-history">歷史</span></div>
           <a class="spot-map-btn" href="https://maps.google.com/?q=Saka+no+ue+no+Kumo+Museum+Matsuyama" target="_blank">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path></svg>
             地圖
           </a>
         </div>
       </div>
 
       <div class="spot-card" data-primary="art">
+		<div class="spot-img-wrap"><img class="spot-img" src="https://svcstrg.cld.navitime.jp/travelguide/p38010002/p38010002_01.jpg" alt="萬翠莊" loading="lazy"></div>
         <div class="spot-time-badge">早上</div>
         <div class="spot-name">萬翠莊</div>
         <div class="spot-en">Bansuiso Villa</div>
@@ -1476,13 +1884,14 @@
         <div class="spot-footer">
           <div class="spot-tags"><span class="tag tag-art">藝術</span></div>
           <a class="spot-map-btn" href="https://maps.google.com/?q=Bansuiso+Villa+Matsuyama" target="_blank">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path></svg>
             地圖
           </a>
         </div>
       </div>
 
       <div class="spot-card" data-primary="food">
+		<div class="spot-img-wrap"><img class="spot-img" src="https://shikoku-tourism.com/image/rendering/issue_page_image/74/trim.4000/4000/2000?v=5028efabce863950658a4f27c46f08e05e3b4344" alt="鯛魚料理" loading="lazy"></div>
         <div class="spot-time-badge">午餐</div>
         <div class="spot-name">鯛魚料理</div>
         <div class="spot-en">Sea Bream (Tai) Cuisine</div>
@@ -1490,13 +1899,14 @@
         <div class="spot-footer">
           <div class="spot-tags"><span class="tag tag-must">必訪</span><span class="tag tag-food">美食</span></div>
           <a class="spot-map-btn" href="https://maps.google.com/?q=Tai+Meshi+Matsuyama+Ehime" target="_blank">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path></svg>
             地圖
           </a>
         </div>
       </div>
 
       <div class="spot-card" data-primary="history">
+		<div class="spot-img-wrap"><img class="spot-img" src="https://joyinhiroshima.com/uploads/2021/10/258-%E4%B8%89%E5%8E%9F%E5%9F%8E%E5%9D%80.jpg" alt="三原城跡" loading="lazy"></div>
         <div class="spot-time-badge">傍晚 抵達</div>
         <div class="spot-name">三原城跡</div>
         <div class="spot-en">Mihara Castle Ruins</div>
@@ -1504,7 +1914,7 @@
         <div class="spot-footer">
           <div class="spot-tags"><span class="tag tag-history">歷史</span></div>
           <a class="spot-map-btn" href="https://maps.google.com/?q=Mihara+Castle+Ruins+Hiroshima" target="_blank">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path></svg>
             地圖
           </a>
         </div>
@@ -1514,7 +1924,7 @@
   </section>
 
   <!-- DAY 8 -->
-  <section class="day-section" id="day8">
+  <section class="day-section visible" id="day8">
     <div class="day-header">
       <div class="day-badge">
         <span class="day-badge-date">5/24</span>
@@ -1562,7 +1972,7 @@
         <div class="spot-footer">
           <div class="spot-tags"><span class="tag tag-activity">體驗</span></div>
           <a class="spot-map-btn" href="https://maps.google.com/?q=Hiroshima+Airport" target="_blank">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path></svg>
             地圖
           </a>
         </div>
@@ -1614,5 +2024,6 @@
   updateActiveNav();
 </script>
 
-</body>
-</html>
+
+
+</body></html>
