@@ -27,13 +27,14 @@ function renderHero(d) {
 }
 
 function renderNav(d) {
+  const mapLink = `<a class="nav-link" href="https://www.google.com/maps/d/u/0/edit?mid=1fEkGLdQ9jO81khaHCx7vAYxyTFRDLJo&hl=zh-TW&ll=34.37327117373383%2C132.93510067125715&z=12" target="_blank">地圖總覽</a>`;
   const links = d.nav_days.map((day, i) =>
     `<a class="nav-link" href="#day${i+1}">${day}</a>`
   ).join('');
   return `
 <nav class="nav">
   <div class="nav-brand">${d.nav_brand}</div>
-  <div class="nav-links">${links}</div>
+  <div class="nav-links">${mapLink}${links}</div>
 </nav>`;
 }
 
