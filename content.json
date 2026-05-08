@@ -1,0 +1,183 @@
+{
+  "hero": {
+    "eyebrow": "Travel Guide · May 2026",
+    "title": "廣島",
+    "subtitle": "Hiroshima · Kure · Miyajima · Onomichi · Shimanami · Matsuyama",
+    "pills": ["5/17 — 5/24", "8 天 7 夜", "中華航空 CI", "廣島 ⇄ 桃園", "叁式員旅"]
+  },
+  "nav_brand": "廣島 2026",
+  "nav_days": ["5/17 日", "5/18 一", "5/19 二", "5/20 三", "5/21 四", "5/22 五", "5/23 六", "5/24 日"],
+  "pickup_subtitle": "出發日 5/17 · 桃園機場集合，共四組",
+  "pickup_groups": [
+    {
+      "label": "🚗 第一車 · 台北出發 · 7人",
+      "type": "stops",
+      "stops": [
+        { "time": "4:00", "location": "辛亥", "count": "接送 2 人", "contact": "Hauzhen", "alert": "", "members": ["Hauzhen", "qin"] },
+        { "time": "4:15", "location": "光復南路", "count": "接送 5 人", "contact": "Jay Tseng", "alert": "⚠️ 報「王先生」", "members": ["XiaoRu", "Jay Tseng", "Pei-Shan Hung", "蝌蚪", "曼巴"] }
+      ]
+    },
+    {
+      "label": "🚗 第二車 · 台北出發 · 4人",
+      "type": "stops",
+      "stops": [
+        { "time": "4:00", "location": "東湖", "count": "接送 2 人", "contact": "Prolong Lai", "alert": "", "members": ["Prolong Lai", "littleherry"] },
+        { "time": "4:15", "location": "光復南路", "count": "接送 2 人", "contact": "alex", "alert": "⚠️ 報「倪小姐」", "members": ["alex", "阿蓓"] }
+      ]
+    },
+    {
+      "label": "🚗 第三團 · 新竹出發 · 4人",
+      "type": "self",
+      "self_note": "🗺️ <strong>4:00</strong>　Glenn、Yen 兩人各自前往機場集合<br>🗺️ <strong>4:00</strong>　ida、IO 兩人各自前往機場集合"
+    }
+  ],
+  "flight_outbound": {
+    "airline": "中華航空 CI",
+    "dep_time": "7:15",
+    "dep_city": "桃園 TPE",
+    "arr_time": "10:35",
+    "arr_city": "廣島 HIJ",
+    "duration": "約 1h 20m"
+  },
+  "flight_return": {
+    "airline": "中華航空 CI",
+    "dep_time": "11:35",
+    "dep_city": "廣島 HIJ",
+    "arr_time": "13:15",
+    "arr_city": "桃園 TPE",
+    "duration": "約 1h 40m"
+  },
+  "days": [
+    {
+      "date": "5/17", "day_en": "SUN", "day_num": "Day 1", "title": "抵達廣島",
+      "region": "廣島市", "region_class": "r-hiroshima",
+      "transport_icon": "🚌", "transport": "廣島機場 → 市區廣島巴士中心 約 45 分，或搭計程車約 35 分",
+      "hotels": [{ "name": "Quintessa Hotel 広島銀山町", "addr": "〒730-0022 広島県広島市中区銀山町10-17", "maps": "https://maps.google.com/?q=Quintessa+Hotel+Hiroshima+Ginzanmachi", "members": [] }],
+      "notes": [],
+      "section_label": "推薦景點",
+      "spots": [
+        { "name": "原爆圓頂館", "en": "Atomic Bomb Dome", "time": "下午", "img": "https://wp-odai.wamazing.com/media/wp-content/uploads/sites/2/2021/12/hiroshimapeacememorialpark_078404ed17aaf1b212072d1ddaca6ba2_m.jpg.webp", "desc": "UNESCO 世界遺產，廣島最重要的歷史地標。1945 年原子彈爆炸後保留下來的工業展示廳遺跡，無聲訴說戰爭的殘酷。", "tags": ["必訪", "歷史"], "maps": "https://maps.google.com/?q=Atomic+Bomb+Dome+Hiroshima" },
+        { "name": "廣島和平紀念公園", "en": "Peace Memorial Park", "time": "下午", "img": "https://www.agoda.com/wp-content/uploads/2024/01/Featured-image-Hiroshima-Peace-Memorial-Park-1244x700.jpg", "desc": "與原爆圓頂館相鄰的廣大公園，設有慰靈碑、和平之鐘與原爆死難者名冊，氛圍莊嚴靜謐，適合漫步沉思。", "tags": ["必訪", "歷史"], "maps": "https://maps.google.com/?q=Hiroshima+Peace+Memorial+Park" },
+        { "name": "和平紀念資料館", "en": "Peace Memorial Museum", "time": "下午", "img": "https://res.klook.com/images/w_1200,h_630,c_fill,q_65/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/x72bq26pfpao1daonid5/%E5%BB%A3%E5%B3%B6%E5%92%8C%E5%B9%B3%E7%B4%80%E5%BF%B5%E8%B3%87%E6%96%99%E9%A4%A8%E5%B8%B8%E8%A8%AD%E5%B1%95%E8%A6%BD%E9%96%80%E7%A5%A8-Klook%E5%AE%A2%E8%B7%AF.jpg", "desc": "館內詳細展示廣島原爆前後的歷史，展品包含受害者遺物與親歷記錄，震撼人心，建議預留 1.5 小時，入場費 200 円。", "tags": ["歷史"], "maps": "https://maps.google.com/?q=Hiroshima+Peace+Memorial+Museum" },
+        { "name": "本通商店街", "en": "Hondori Shopping Street", "time": "傍晚", "img": "", "desc": "廣島市區最熱鬧的拱廊商店街，從藥妝店、伴手禮到咖啡廳一應俱全，輕鬆採購廣島必買名產。", "tags": ["美食"], "maps": "https://maps.google.com/?q=Hondori+Shopping+Street+Hiroshima" },
+        { "name": "廣島燒 お好み村", "en": "Okonomimura Village", "time": "晚餐", "img": "", "desc": "六層樓、數十家廣島燒名店匯聚的大阪燒村，每家口味略有不同，現點現做，廣島必吃體驗！", "tags": ["必訪", "美食"], "maps": "https://maps.google.com/?q=Okonomimura+Hiroshima" }
+      ]
+    },
+    {
+      "date": "5/18", "day_en": "MON", "day_num": "Day 2", "title": "Mazda 博物館 → 吳市",
+      "region": "廣島市 / 吳市", "region_class": "r-kure",
+      "transport_icon": "🚗", "transport": "廣島市區 → Mazda 本社（電車至向洋站）→ 吳市（JR 呉線約 30 分）",
+      "hotels": [{ "name": "Quintessa Hotel 広島銀山町（連住）", "addr": "〒730-0022 広島県広島市中区銀山町10-17", "maps": "https://maps.google.com/?q=Quintessa+Hotel+Hiroshima+Ginzanmachi", "members": [] }],
+      "notes": [],
+      "section_label": "景點行程",
+      "spots": [
+        { "name": "Mazda 博物館", "en": "Mazda Museum", "time": "9:00", "img": "https://www.mazda.com.tw/globalassets/mazda/mazda-stories/08_-mazda-/mazda_stories_2.jpg", "desc": "Mazda 本社工廠附設博物館，展示百年汽車發展史與品牌故事，需提前官網預約，免費參觀，每梯次約 90 分鐘。", "tags": ["必訪", "體驗"], "maps": "https://maps.google.com/?q=Mazda+Museum+Hiroshima" },
+        { "name": "大和博物館", "en": "Yamato Museum, Kure", "time": "13:00", "img": "https://cdn.japan-travel-note.com/images/00106/thumbnail-en-541x284.webp", "desc": "展示舊日本海軍歷史與 1:10 比例戰艦大和模型，全日本規模最大的艦艇博物館，歷史迷必訪，門票 800 円。", "tags": ["必訪", "歷史"], "maps": "https://maps.google.com/?q=Yamato+Museum+Kure" },
+        { "name": "鐵のくじら館", "en": "Iron Whale Museum", "time": "14:30", "img": "https://static.gltjp.com/glt/data/directory/13000/12506/20220109_114250_94b09204_w1920.webp", "desc": "真實退役潛水艇展示，可入艦參觀狹窄艙室與操作設備，完全免費，與大和博物館步行距離，不可錯過！", "tags": ["必訪", "歷史"], "maps": "https://maps.google.com/?q=Iron+Whale+Museum+Kure+Japan" },
+        { "name": "入船山記念館", "en": "Irifuneyama Memorial Museum", "time": "15:30", "img": "https://assets.sparkle.travel/place/82856438-dc5c-11ee-9b39-c7c8948f11a7/0jbdiq/640x427ablur.jpg", "desc": "舊吳鎮守府司令官官舍改建，保留明治時期中西合璧建築風格，庭園幽靜，門票 250 円。", "tags": ["歷史"], "maps": "https://maps.google.com/?q=Irifuneyama+Memorial+Museum+Kure" },
+        { "name": "吳港灣散步", "en": "Kure Port Promenade", "time": "16:30", "img": "https://d1grca2t3zpuug.cloudfront.net/2022/12/22kureshi9.jpg", "desc": "沿著吳港海岸線散步，現役海上自衛隊護衛艦就停靠在岸邊，軍艦迷的絕佳攝影機會。吳灣艦船巡遊則剛好周二公休", "tags": ["自然"], "maps": "https://maps.google.com/?q=Kure+Port+Hiroshima" },
+        { "name": "煉瓦通商店街", "en": "Shopping mall in Kure", "time": "17:30", "img": "https://wp-odai.wamazing.com/media/wp-content/uploads/sites/2/2023/01/hiroshimakure_image10.jpg.webp", "desc": "位於吳市中心的「吳中通商店街」是市內最熱鬧的商店街，由於路面鋪上了滿滿的紅磚，故也被稱為「煉瓦通」。", "tags": ["美食"], "maps": "https://maps.google.com/?q=Kure+Port+Hiroshima" }
+      ]
+    },
+    {
+      "date": "5/19", "day_en": "TUE", "day_num": "Day 3", "title": "下瀨美術館 → 宮島・嚴島神社",
+      "region": "大竹 / 宮島", "region_class": "r-miyajima",
+      "transport_icon": "🚗", "transport": "廣島 → 下瀨美術館 → 宮島口 → 渡輪至宮島（JR Pass 可搭渡輪，約 10 分）",
+      "hotels": [{ "name": "Quintessa Hotel 広島銀山町（連住）", "addr": "〒730-0022 広島県広島市中区銀山町10-17", "maps": "https://maps.google.com/?q=Quintessa+Hotel+Hiroshima+Ginzanmachi", "members": [] }],
+      "notes": ["💡 <strong>潮汐提醒：</strong>嚴島神社退潮時可步行至大鳥居旁，漲潮時鳥居倒映海面最為壯觀。建議出發前 <a href=\"https://haichaobiao.com/jp/hiroshima/itsukushima\" target=\"_blank\">查詢</a> 當天潮汐時刻，安排 <a href=\"https://github.com/glenn543/2026-/blob/main/images/%E6%BD%AE%E6%B1%90.png?raw=true\" target=\"_blank\">最佳參觀時間</a>。"],
+      "section_label": "景點行程",
+      "spots": [
+        { "name": "下瀨美術館", "en": "Kage Museum of Art", "time": "9:30", "img": "https://image-cdn.hypb.st/https%3A%2F%2Fpopbee.com%2Fimage%2F2024%2F12%2Fthe-worlds-most-beautiful-museums-simose-art-museum-hiroshima-japan15.jpg?w=1260&cbr=1&q=90&fit=max", "desc": "2023 年開幕的水上美術館，建築漂浮於瀨戶內海邊，展示現代藝術作品，建築本身即是一件藝術品。", "tags": ["必訪", "藝術"], "maps": "https://maps.google.com/?q=Shimonoseki+Museum+of+Art+Kage+Hiroshima" },
+        { "name": "嚴島神社", "en": "Itsukushima Shrine", "time": "午餐後", "img": "https://wattention.com/tw/wp-content/uploads/2023/01/Itsukushima-Shrine-%E2%80%93-Hiroshima-4.jpg", "desc": "日本三景之一，UNESCO 世界遺產。海中聳立的大鳥居是宮島的象徵，朱紅色迴廊延伸入海，視覺震撼。門票 300 円。", "tags": ["必訪", "歷史"], "maps": "https://maps.google.com/?q=Itsukushima+Shrine+Miyajima" },
+        { "name": "牡蠣料理街", "en": "Oyster Street, Miyajima", "time": "午餐", "img": "https://pic.pimg.tw/immegumi/1681055791-3233555511-g_l.jpg", "desc": "宮島名物廣島牡蠣，表町通り一帶有烤牡蠣、牡蠣飯、牡蠣可樂餅等各式料理，肥美鮮甜，不可錯過。", "tags": ["必訪", "美食"], "maps": "https://maps.google.com/?q=Miyajima+Oyster+Street" },
+        { "name": "大聖院", "en": "Daisho-in Temple", "time": "下午", "img": "https://tw.tabiiro.travel/lpimg/leisure/206381/main/img4.jpg", "desc": "宮島最古老的寺院，有轉經輪長廊與五百羅漢石像群，爬石階而上，莊嚴神秘的氛圍截然不同於神社。", "tags": ["歷史"], "maps": "https://maps.google.com/?q=Daisho-in+Temple+Miyajima" },
+        { "name": "彌山登山", "en": "Mt. Misen Hiking", "time": "下午", "img": "https://cdn-ak.f.st-hatena.com/images/fotolife/b/burariwalking/20250728/20250728114143.jpg", "desc": "搭纜車或步行登頂 535 公尺彌山，晴天可 360° 俯瞰瀨戶內海群島美景，纜車來回票約 2000 円。", "tags": ["自然", "體驗"], "maps": "https://maps.google.com/?q=Mount+Misen+Miyajima" }
+      ]
+    },
+    {
+      "date": "5/20", "day_en": "WED", "day_num": "Day 4", "title": "尾道自由行",
+      "region": "尾道市", "region_class": "r-onomichi",
+      "transport_icon": "🚆", "transport": "廣島 Check Out → 新幹線 廣島至尾道（JR 山陽本線 約 80 分）",
+      "hotels": [{ "name": "尾道 Royal Hotel（皇家飯店）", "addr": "〒722-0035 広島県尾道市土堂2-9-27 海岸通り住吉神社前", "maps": "https://maps.google.com/?q=Onomichi+Royal+Hotel+Hiroshima", "members": [] }],
+      "notes": [],
+      "section_label": "景點行程",
+      "spots": [
+        { "name": "千光寺", "en": "Senkoji Temple", "time": "下午", "img": "https://wp-odai.wamazing.com/media/wp-content/uploads/sites/2/2025/03/onomichidaytrip_pixta_97735162_M.jpg.webp", "desc": "搭纜車上千光寺山，俯瞰尾道海峽與層疊屋瓦，朱紅色本堂是尾道最具代表性的景象，日落前尤為美麗。", "tags": ["必訪", "自然"], "maps": "https://maps.google.com/?q=Senkoji+Temple+Onomichi" },
+        { "name": "貓之細道", "en": "Cat's Alley", "time": "下午", "img": "https://www.onomichi-hansei.com/sightseeing/item/nekonohosomichi.jpg", "desc": "千光寺山腰的蜿蜒石板小道，沿途布滿藝術貓咪石雕，是尾道流浪貓的聚集地，隨時可能巧遇橘貓出來打招呼。", "tags": ["必訪", "藝術"], "maps": "https://maps.google.com/?q=Cat+Alley+Onomichi+Neko+no+Hosomichi" },
+        { "name": "尾道本通り商店街", "en": "Onomichi Hondori", "time": "下午", "img": "https://resources.matcha-jp.com/resize/720x2000/2019/08/30-84939.webp", "desc": "保留濃厚昭和風情的拱廊商街，老書店、手作糕餅、古民家咖啡廳散落其間，尾道醬油拉麵是必吃名物。", "tags": ["美食"], "maps": "https://maps.google.com/?q=Onomichi+Hondori+Shopping+Street" },
+        { "name": "尾道海峽散步", "en": "Onomichi Channel Walk", "time": "黃昏", "img": "https://github.com/glenn543/2026-/blob/main/images/divehiroshima_feature_island_shimanami_img07.webp?raw=true", "desc": "沿渡船頭海岸漫步，靜看小渡輪往來穿梭，黃昏夕陽映照海峽，對岸向島燈光逐漸亮起，是尾道最浪漫的時刻。", "tags": ["自然"], "maps": "https://maps.google.com/?q=Onomichi+Ferry+Port+Hiroshima" },
+        { "name": "兔兔庵", "en": "Toto-an", "time": "白天", "img": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHhc5-Hz8snrt3i6Lz9parGmyPyYUBYI2HV1BfPnBQb8GsJNyQBJflUGsFEtacB6Ob0Uew0C1o9iuh_HDKqS5U1AEcCuHzE01tOFCHMfOL1L0AMxm-uebPicdArJiPkYgJ4RWQ=w426-h240-k-no", "desc": "廣島縣尾道市的一家日式糕點店，以使用100%國產本花粉製作的「本花捲」而聞名。", "tags": ["美食", "甜點"], "maps": "https://maps.app.goo.gl/zDVsWjj8T7keZ3gTA" },
+        { "name": "ごはんと珈琲アルト alto", "en": "alto", "time": "白天", "img": "https://pecomag.jp/wp-content/uploads/2022/12/d2c95ca91db9df08e86fdd45839b22ae.jpg", "desc": "所有餐點都是老闆用當季食材現作，咖啡也是當地店家烘焙，二樓可以上去休息，夏天時整片窗戶會取下通風，外面竹林幽美。", "tags": ["美食", "咖啡"], "maps": "https://maps.app.goo.gl/fNVqtgcwTCwwNqoT8" },
+        { "name": "シェアキッチン尾道西土堂店", "en": "Little Setouchi", "time": "白天", "img": "https://github.com/glenn543/2026-/blob/main/%E3%82%B7%E3%82%A7%E3%82%A2%E3%82%AD%E3%83%83%E3%83%81%E3%83%B3%E5%B0%BE%E9%81%93%E8%A5%BF%E5%9C%9F%E5%A0%82%E5%BA%97.png?raw=true", "desc": "這家是共享廚房，不同時間會有不同的店家進駐，前往看看這次有什麼驚喜。", "tags": ["美食", "咖啡"], "maps": "https://maps.app.goo.gl/qhB7J1CBUk3Lhokp6" },
+        { "name": "岡村春子商店-魚春", "en": "Deli&Kitchen", "time": "白天", "img": "https://uoharu-haruko.com/uoharu/en/img/mv.jpg", "desc": "來尾道除了喝杯咖啡、吃一碗熱騰騰的尾道拉麵之外，也很推薦來這間祖孫三代賣魚的店，一邊看海一邊吃生魚丼飯！", "tags": ["美食", "早午餐"], "maps": "https://maps.app.goo.gl/mwHuouauWosZy1Kv8" },
+        { "name": "ONOMICHI U2", "en": "ONOMICHI U2", "time": "上午", "img": "https://static.gltjp.com/glt/data/directory/12000/11353/20210107_094136_1914b540_w1920.webp", "desc": "由海軍倉庫翻新改建，是間以自行車為概念發想的複合式空間。內有自行車旅店、餐廳、雜貨店、麵包店、咖啡館進駐。", "tags": ["美食"], "maps": "https://maps.app.goo.gl/tQ4WqWSL8vPuKATN7" }
+      ]
+    },
+    {
+      "date": "5/21", "day_en": "THU", "day_num": "Day 5", "title": "島波海道 單車之旅 🚲",
+      "region": "尾道 → 大三島", "region_class": "r-shimanami", "badge_color": "var(--red)",
+      "transport_icon": "🚲", "transport": "尾道渡船頭租車 → 向島 → 因島 → 生口島 → 大三島｜跨海大橋單車道全程約 35km",
+      "hotels": [
+        { "name": "島宿 農と凪（大通鋪）", "addr": "〒794-1402 愛媛県今治市上浦町井口6376", "maps": "https://maps.app.goo.gl/9J6CitHgaqouPP8A9", "members": ["Wayne", "Joyce", "Prolong", "LittleHerry", "Hoba", "小猴", "Glenn", "Yao", "Jay", "Pei-Shan Hung", "蝌蚪", "曼巴"] },
+        { "name": "大三島 島宿しずく", "addr": "〒794-1304　愛媛県今治市大三島町宮浦5498番1", "maps": "https://maps.app.goo.gl/c5r7CvZ2rwwdcYUZ9", "members": ["Hauzhen", "Qin", "Jolin", "Xiao", "Ida", "Io", "Lynn", "李權承"] }
+      ],
+      "notes": [
+        "💡 <strong>單車租借：</strong>在尾道渡船頭的「ジャイアント尾道店」或「シクロの家」租借，可在今治或大三島異地還車。行李請在尾道車站寄存，晚上由民宿安排接送。強風天注意橋上安全。",
+        "⚠️ <strong>騎車注意事項：</strong><ol style=\"margin-top:8px;padding-left:1.4em;line-height:2;\"><li>熟記自行車手勢，遇到問題時直接大聲喊出來</li><li>衣服穿著，請穿排汗為主，可自備車衣褲，然後<strong>不要穿寬鬆的長褲</strong></li><li>自備<strong>太陽眼鏡跟防曬</strong>周邊物品</li><li>口袋、背包<strong>不要放</strong>容易脫落的東西</li></ol>"
+      ],
+      "section_label": "沿途景點",
+      "spots": [
+        { "name": "向島 兼吉商店街", "en": "Mukaishima Kanekichi St.", "time": "出發", "img": "", "desc": "渡輪至向島後的第一個小鎮，昭和老街氛圍濃厚，在這裡補充早餐、喝杯咖啡再正式踏上單車旅程。", "tags": ["美食"], "maps": "https://maps.google.com/?q=Mukaishima+Island+Onomichi" },
+        { "name": "耕三寺・未來心の丘", "en": "Kosanji Temple & Miraishin Hill", "time": "中途", "img": "https://img.cooljapan-videos.com/r/1000x666/files/article_images/6a1abbbe8a7ffae8c4e7aa9e7c910827eb6a4620.jpg.webp", "desc": "純白大理石山丘「未來心の丘」是瀨戶內海最知名打卡景點，搭配蔚藍天空和海洋背景，宛如置身希臘小島。門票 1400 円。", "tags": ["必訪", "藝術"], "maps": "https://maps.google.com/?q=Kosanji+Temple+Setoda+Oshima" },
+        { "name": "しおまち商店街", "en": "Shiomachi Shotengai", "time": "午餐", "img": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGEVWEWA_rBMg9rCuyQU5fZ66I5QqzOTQ5J3p4ludd1pAHNy2PGhtGVPaN8nZCpW29xJX6G7AS8fBCQ7Fup67MChAfEH48oLeamIytUo9zI9lm5O1pGqswqSPGeIXOpLvIPwG72bjg2JBE=w408-h543-k-no", "desc": "位於生口島上，距離港口、島波海道自行車道不遠，也成為世界各地旅客們品嚐在地美食、買伴手禮的好地方。", "tags": ["美食"], "maps": "https://maps.google.com/?q=Setoda+Ikuchijima+Island+Hiroshima" },
+        { "name": "MINATOYA – 港口食堂", "en": "Minato Shokudo", "time": "午餐", "img": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFr_8HogwbWpn0sPHgIOYR1O5irI4zfp9p2wvYqhTDdJyHXDwz2lq5Z3JOFjg85UBofxoyRjsa4LkJ_CCNqFVCBSkKVf80uvUITN_oxdbj1668wNKmsMxpZNfbjjy4i9Bxy6qpwi3Z2V27T=w408-h272-k-no", "desc": "以 140 年江戶時代末期富商堀内家三原屋老倉庫改建，結合港口食堂、旅宿及文化活動的空間。", "tags": ["美食"], "maps": "https://maps.google.com/?q=Setoda+Ikuchijima+Island+Hiroshima" },
+        { "name": "瀨戶田 檸檬料理", "en": "Setoda Lemon Cuisine", "time": "午餐", "img": "https://image.dive-hiroshima.com/wp-content/uploads/2022/01/18-12-1024x521.jpg", "desc": "生口島是日本最大的檸檬產地，各式檸檬拉麵、檸檬蛋糕、檸檬果凍是當地限定名物，騎車路上順道品嚐。", "tags": ["必訪", "美食"], "maps": "https://maps.google.com/?q=Setoda+Ikuchijima+Island+Hiroshima" },
+        { "name": "大山祇神社", "en": "Oyamazumi Shrine", "time": "抵達", "img": "https://momijiaoi.net/wp-content/uploads/2021/06/ooyamadumi2020032940.jpg", "desc": "日本全國神社之祖，收藏全日本約 80% 的國寶武具盔甲，神域內有樹齡 2600 年的大楠木，莊嚴肅穆。", "tags": ["歷史"], "maps": "https://maps.google.com/?q=Oyamazumi+Shrine+Omishima+Ehime" }
+      ]
+    },
+    {
+      "date": "5/22", "day_en": "FRI", "day_num": "Day 6", "title": "大三島 → 今治 → 松山",
+      "region": "今治 / 松山", "region_class": "r-matsuyama",
+      "transport_icon": "🚌", "transport": "大三島 → 今治巴士總站 → 伊予鐵道至松山市區（巴士+電車約 1.5hr）",
+      "hotels": [{ "name": "Comfort Hotel 松山", "addr": "〒790-0005 愛媛県松山市花園町3-18", "maps": "https://maps.google.com/?q=Comfort+Hotel+Matsuyama+Ehime", "members": [] }],
+      "notes": [],
+      "section_label": "景點行程",
+      "spots": [
+        { "name": "今治城", "en": "Imabari Castle", "time": "今治 途中", "img": "https://hit-product-resources-public.s3.ap-northeast-1.amazonaws.com/images/2408/XKaY2vfittosnhTO9nb9/large.jpg", "desc": "罕見以海水為護城河的「水城」，城牆直接建於海上，現存天守閣保存完好，登頂可遠眺今治灣與島波海道。", "tags": ["歷史"], "maps": "https://maps.google.com/?q=Imabari+Castle+Ehime" },
+        { "name": "松山城", "en": "Matsuyama Castle", "time": "下午", "img": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2a/92/e3/7b/132m.jpg?w=900&h=500&s=1", "desc": "日本現存 12 座完整天守之一，搭纜車上山，松山市景盡收眼底，每逢春季染井吉野盛開，是四國最美的城堡。", "tags": ["必訪", "歷史"], "maps": "https://maps.google.com/?q=Matsuyama+Castle+Ehime" },
+        { "name": "道後溫泉本館", "en": "Dogo Onsen Honkan", "time": "傍晚", "img": "https://res.cloudinary.com/dho7osbtl/image/upload/w_1500,h_1000,c_fill,f_auto,fl_lossy,q_auto/v1/cms/filer_public/f8/ea/f8eaa914-01e8-4dd7-a4b6-b6993b2cb95b/spot_0055_02_erdicx", "desc": "日本最古老溫泉，明治 28 年建成，是宮崎駿神隱少女的創作靈感。目前部分修繕中，外觀與部分浴場仍可使用。", "tags": ["必訪", "體驗"], "maps": "https://maps.google.com/?q=Dogo+Onsen+Honkan+Matsuyama" },
+        { "name": "道後溫泉街", "en": "Dogo Onsen Area", "time": "傍晚", "img": "", "desc": "溫泉旅館街熱鬧非凡，有鯛魚燒、みかん（柑橘）果汁現榨攤、土產店，穿著浴衣漫步是標準道後體驗。", "tags": ["美食"], "maps": "https://maps.google.com/?q=Dogo+Onsen+Shopping+Street+Matsuyama" }
+      ]
+    },
+    {
+      "date": "5/23", "day_en": "SAT", "day_num": "Day 7", "title": "松山自由行 → 三原",
+      "region": "松山 / 三原", "region_class": "r-mihara",
+      "transport_icon": "🚢", "transport": "推薦：松山觀光港 → 廣島港（高速船 70 分）→ JR 至三原 / 或 JR 陸路至三原",
+      "hotels": [{ "name": "Super Hotel 三原駅前", "addr": "〒723-0014 広島県三原市城町1-12-10", "maps": "https://maps.google.com/?q=Super+Hotel+Mihara+Station+Hiroshima", "members": [] }],
+      "notes": ["💡 <strong>建議交通：</strong>搭松山→廣島高速船，可沿途欣賞瀨戶內海島嶼風光，比坐電車有趣許多。船票約 7000 円，需提前預訂。"],
+      "section_label": "景點行程",
+      "spots": [
+        { "name": "坂の上の雲博物館", "en": "Shiba Ryotaro Memorial Museum", "time": "早上", "img": "https://shikoku-tourism.com/image/rendering/attraction_image/40425/trim.900/3/2?v=fd11bd8232e02bf9b1a7a075421c1c90de7f59ef", "desc": "以司馬遼太郎小說為主題，安藤忠雄設計的三角形建築本身就值得參觀，館內展示松山三勇士與明治維新歷史。", "tags": ["藝術", "歷史"], "maps": "https://maps.google.com/?q=Saka+no+ue+no+Kumo+Museum+Matsuyama" },
+        { "name": "萬翠莊", "en": "Bansuiso Villa", "time": "早上", "img": "https://svcstrg.cld.navitime.jp/travelguide/p38010002/p38010002_01.jpg", "desc": "大正 11 年建造的法式洋館，是松山藩主久松家的夏日別墅，花園與建築風格典雅，與坂の上の雲博物館相鄰。", "tags": ["藝術"], "maps": "https://maps.google.com/?q=Bansuiso+Villa+Matsuyama" },
+        { "name": "鯛魚料理", "en": "Sea Bream Cuisine", "time": "午餐", "img": "https://shikoku-tourism.com/image/rendering/issue_page_image/74/trim.4000/4000/2000?v=5028efabce863950658a4f27c46f08e05e3b4344", "desc": "愛媛縣名物，松山風格鯛魚茶泡飯與宇和島鯛魚生魚片丼各有特色，出發前可先查 Tabelog 選好餐廳。", "tags": ["必訪", "美食"], "maps": "https://maps.google.com/?q=Tai+Meshi+Matsuyama+Ehime" },
+        { "name": "三原城跡", "en": "Mihara Castle Ruins", "time": "傍晚 抵達", "img": "https://joyinhiroshima.com/uploads/2021/10/258-%E4%B8%89%E5%8E%9F%E5%9F%8E%E5%9D%80.jpg", "desc": "JR 三原車站即在城跡旁，月形石垣直接建於海上，是著名「水城」，車站月台就在城跡上方，散步即可參觀，免費。", "tags": ["歷史"], "maps": "https://maps.google.com/?q=Mihara+Castle+Ruins+Hiroshima" }
+      ]
+    },
+    {
+      "date": "5/24", "day_en": "SUN", "day_num": "Day 8", "title": "返回台灣",
+      "region": "三原 → 廣島機場", "region_class": "r-flight",
+      "transport_icon": "🚌", "transport": "三原站 → 廣島空港 利木津巴士 約 30 分｜建議 09:30 前抵達機場",
+      "hotels": [],
+      "notes": [],
+      "show_return_flight": true,
+      "section_label": "行前準備",
+      "spots": [
+        { "name": "廣島機場免稅區", "en": "Hiroshima Airport HIJ", "time": "出發前", "img": "", "desc": "廣島機場有廣島限定土產可在出境後選購，推薦：もみじ饅頭、廣島牡蠣罐頭、熊野筆化妝刷。", "tags": ["體驗"], "maps": "https://maps.google.com/?q=Hiroshima+Airport" }
+      ]
+    }
+  ],
+  "footer_title": "廣島・愛媛 旅遊手冊 2026",
+  "footer_dates": "5/17 — 5/24 · 8 天 7 夜 · 廣島 / 吳市 / 宮島 / 尾道 / 島波海道 / 松山 / 三原",
+  "footer_airline": "中華航空 CI · 桃園 ⇄ 廣島",
+  "footer_note": "地圖連結由 Google Maps 提供。景點資訊僅供參考，請出發前再次確認。"
+}
