@@ -2,7 +2,6 @@
   "footer_dates": "5/17 — 5/24 · 8 天 7 夜 · 廣島 / 吳市 / 宮島 / 尾道 / 島波海道 / 松山 / 三原",
   "nav_brand": "廣島 2026",
   "nav_days": [
-    "<a href=\"https://www.google.com/maps/d/u/0/edit?mid=1fEkGLdQ9jO81khaHCx7vAYxyTFRDLJo&hl=zh-TW&ll=34.37327117373383%2C132.93510067125715&z=12\" target=\"_blank\">地圖總攬</a>",
     "5/17 日",
     "5/18 一",
     "5/19 二",
@@ -399,7 +398,7 @@
     {
       "notes": [
         "💡 <strong>單車租借：</strong>在尾道渡船頭的「ジャイアント尾道店」或「シクロの家」租借，可在今治或大三島異地還車。行李請在尾道車站寄存，晚上由民宿安排接送。強風天注意橋上安全。",
-        "⚠️ <strong>騎車注意事項：</strong><ol style=\"margin-top:8px;padding-left:1.4em;line-height:2;\"><li>熟記自行車手勢，遇到問題時直接大聲喊出來</li><li>衣服穿著，請穿排汗為主，可自備車衣褲，然後<strong>不要穿寬鬆的長褲</strong></li><li>自備<strong>太陽眼鏡跟防曬</strong>周邊物品</li><li>口袋、背包<strong>不要放</strong>容易脫落的東西</li></ol>"
+        "⚠️ <strong>騎車注意事項：</strong> <a href=\"https://raw.githubusercontent.com/glenn543/2026-/refs/heads/main/images/RULE.png\" target=\"_blank\" style=\"display:inline-flex;align-items:center;gap:4px;background:#e53e3e;color:#fff;padding:2px 10px;border-radius:20px;font-size:0.8em;text-decoration:none;font-weight:600;\">罰款條例</a><ol style=\"margin-top:8px;padding-left:1.4em;line-height:2;\"><li>熟記<a href=\"https://raw.githubusercontent.com/glenn543/2026-/refs/heads/main/images/%E8%A1%8C%E8%BB%8A%E6%89%8B%E5%8B%A2.png\" target=\"_blank\">自行車手勢</a>，遇到問題時直接大聲喊出來</li><li>衣服穿著，請穿排汗為主，可自備車衣褲，然後<strong>不要穿寬鬆的長褲</strong></li><li>自備<strong>太陽眼鏡跟防曬</strong>周邊物品</li><li>口袋、背包<strong>不要放</strong>容易脫落的東西</li></ol>"
       ],
       "day_num": "Day 5",
       "badge_color": "var(--red)",
