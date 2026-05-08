@@ -2,12 +2,6 @@
   "days": [
     {
       "notes": [],
-      "day_num": "Day 1",
-      "transport": "<a href=\"https://www.hij.airport.jp/tw/access/timetable/\" target=\"_blank\" style=\"color:inherit;\">廣島機場 → 市區廣島</a> 約 45 分，或搭計程車約 35 分",
-      "day_en": "SUN",
-      "region_class": "r-hiroshima",
-      "date": "5/17",
-      "transport_icon": "🚌",
       "spots": [
         {
           "name": "原爆圓頂館",
@@ -68,8 +62,6 @@
           "maps": "https://maps.google.com/?q=Okonomimura+Hiroshima"
         }
       ],
-      "region": "廣島市",
-      "title": "抵達廣島",
       "section_label": "推薦景點",
       "hotels": [
         {
@@ -78,16 +70,24 @@
           "maps": "https://maps.google.com/?q=Quintessa+Hotel+Hiroshima+Ginzanmachi",
           "members": []
         }
-      ]
+      ],
+      "date_info": {
+        "date": "5/17",
+        "day_en": "SUN"
+      },
+      "title_info": {
+        "day_num": "Day 1",
+        "title": "抵達廣島",
+        "region": "廣島市",
+        "region_class": "r-hiroshima"
+      },
+      "transport": {
+        "icon": "🚌",
+        "text": "<a href=\"https://www.hij.airport.jp/tw/access/timetable/\" target=\"_blank\" style=\"color:inherit;\">廣島機場 → 市區廣島</a> 約 45 分，或搭計程車約 35 分"
+      }
     },
     {
       "notes": [],
-      "day_num": "Day 2",
-      "transport": "廣島市區 → Mazda 本社（電車至向洋站）→ 吳市（JR 呉線約 30 分）",
-      "day_en": "MON",
-      "region_class": "r-kure",
-      "date": "5/18",
-      "transport_icon": "🚗",
       "spots": [
         {
           "name": "Mazda 博物館",
@@ -159,8 +159,6 @@
           "maps": "https://maps.google.com/?q=Kure+Port+Hiroshima"
         }
       ],
-      "region": "廣島市 / 吳市",
-      "title": "Mazda 博物館 → 吳市",
       "section_label": "景點行程",
       "hotels": [
         {
@@ -169,18 +167,26 @@
           "maps": "https://maps.google.com/?q=Quintessa+Hotel+Hiroshima+Ginzanmachi",
           "members": []
         }
-      ]
+      ],
+      "date_info": {
+        "date": "5/18",
+        "day_en": "MON"
+      },
+      "title_info": {
+        "day_num": "Day 2",
+        "title": "Mazda 博物館 → 吳市",
+        "region": "廣島市 / 吳市",
+        "region_class": "r-kure"
+      },
+      "transport": {
+        "icon": "🚗",
+        "text": "廣島市區 → Mazda 本社（電車至向洋站）→ 吳市（JR 呉線約 30 分）"
+      }
     },
     {
       "notes": [
         "💡 <strong>潮汐提醒：</strong>嚴島神社退潮時可步行至大鳥居旁，漲潮時鳥居倒映海面最為壯觀。建議出發前 <a href=\"https://haichaobiao.com/jp/hiroshima/itsukushima\" target=\"_blank\">查詢</a> 當天潮汐時刻，安排 <a href=\"https://github.com/glenn543/2026-/blob/main/images/%E6%BD%AE%E6%B1%90.png?raw=true\" target=\"_blank\">最佳參觀時間</a>。"
       ],
-      "day_num": "Day 3",
-      "transport": "廣島 → 下瀨美術館 → 宮島口 → 渡輪至宮島（JR Pass 可搭渡輪，約 10 分）",
-      "day_en": "TUE",
-      "region_class": "r-miyajima",
-      "date": "5/19",
-      "transport_icon": "🚗",
       "spots": [
         {
           "name": "下瀨美術館",
@@ -242,8 +248,6 @@
           "maps": "https://maps.google.com/?q=Mount+Misen+Miyajima"
         }
       ],
-      "region": "大竹 / 宮島",
-      "title": "下瀨美術館 → 宮島・嚴島神社",
       "section_label": "景點行程",
       "hotels": [
         {
@@ -252,16 +256,24 @@
           "maps": "https://maps.google.com/?q=Quintessa+Hotel+Hiroshima+Ginzanmachi",
           "members": []
         }
-      ]
+      ],
+      "date_info": {
+        "date": "5/19",
+        "day_en": "TUE"
+      },
+      "title_info": {
+        "day_num": "Day 3",
+        "title": "下瀨美術館 → 宮島・嚴島神社",
+        "region": "大竹 / 宮島",
+        "region_class": "r-miyajima"
+      },
+      "transport": {
+        "icon": "🚗",
+        "text": "廣島 → 下瀨美術館 → 宮島口 → 渡輪至宮島（JR Pass 可搭渡輪，約 10 分）"
+      }
     },
     {
       "notes": [],
-      "day_num": "Day 4",
-      "transport": "廣島 Check Out → 新幹線 廣島至尾道（JR 山陽本線 約 80 分）",
-      "day_en": "WED",
-      "region_class": "r-onomichi",
-      "date": "5/20",
-      "transport_icon": "🚆",
       "spots": [
         {
           "name": "千光寺",
@@ -369,8 +381,6 @@
           "maps": "https://maps.app.goo.gl/tQ4WqWSL8vPuKATN7"
         }
       ],
-      "region": "尾道市",
-      "title": "尾道自由行",
       "section_label": "景點行程",
       "hotels": [
         {
@@ -379,20 +389,28 @@
           "maps": "https://maps.google.com/?q=Onomichi+Royal+Hotel+Hiroshima",
           "members": []
         }
-      ]
+      ],
+      "date_info": {
+        "date": "5/20",
+        "day_en": "WED"
+      },
+      "title_info": {
+        "day_num": "Day 4",
+        "title": "尾道自由行",
+        "region": "尾道市",
+        "region_class": "r-onomichi"
+      },
+      "transport": {
+        "icon": "🚆",
+        "text": "廣島 Check Out → 新幹線 廣島至尾道（JR 山陽本線 約 80 分）"
+      }
     },
     {
       "notes": [
         "💡 <strong>單車租借：</strong>在尾道渡船頭的「ジャイアント尾道店」或「シクロの家」租借，可在今治或大三島異地還車。行李請在尾道車站寄存，晚上由民宿安排接送。強風天注意橋上安全。",
         "⚠️ <strong>騎車注意事項：</strong> <a href=\"https://raw.githubusercontent.com/glenn543/2026-/refs/heads/main/images/RULE.png\" target=\"_blank\" style=\"display:inline-flex;align-items:center;gap:4px;background:#e53e3e;color:#fff;padding:2px 10px;border-radius:20px;font-size:0.8em;text-decoration:none;font-weight:600;\">罰款條例</a><ol style=\"margin-top:8px;padding-left:1.4em;line-height:2;\"><li>熟記<a href=\"https://raw.githubusercontent.com/glenn543/2026-/refs/heads/main/images/%E8%A1%8C%E8%BB%8A%E6%89%8B%E5%8B%A2.png\" target=\"_blank\">自行車手勢</a>，遇到問題時直接大聲喊出來</li><li>衣服穿著，請穿排汗為主，可自備車衣褲，然後<strong>不要穿寬鬆的長褲</strong></li><li>自備<strong>太陽眼鏡跟防曬</strong>周邊物品</li><li>口袋、背包<strong>不要放</strong>容易脫落的東西</li></ol>"
       ],
-      "day_num": "Day 5",
       "badge_color": "var(--red)",
-      "transport": "尾道渡船頭租車 → 向島 → 因島 → 生口島 → 大三島｜跨海大橋單車道全程約 35km",
-      "day_en": "THU",
-      "region_class": "r-shimanami",
-      "date": "5/21",
-      "transport_icon": "🚲",
       "spots": [
         {
           "name": "向島 兼吉商店街",
@@ -463,8 +481,6 @@
           "maps": "https://maps.google.com/?q=Oyamazumi+Shrine+Omishima+Ehime"
         }
       ],
-      "region": "尾道 → 大三島",
-      "title": "島波海道 單車之旅 🚲",
       "section_label": "沿途景點",
       "hotels": [
         {
@@ -501,16 +517,24 @@
             "李權承"
           ]
         }
-      ]
+      ],
+      "date_info": {
+        "date": "5/21",
+        "day_en": "THU"
+      },
+      "title_info": {
+        "day_num": "Day 5",
+        "title": "島波海道 單車之旅 🚲",
+        "region": "尾道 → 大三島",
+        "region_class": "r-shimanami"
+      },
+      "transport": {
+        "icon": "🚲",
+        "text": "尾道渡船頭租車 → 向島 → 因島 → 生口島 → 大三島｜跨海大橋單車道全程約 35km"
+      }
     },
     {
       "notes": [],
-      "day_num": "Day 6",
-      "transport": "大三島 → 今治巴士總站 → 伊予鐵道至松山市區（巴士+電車約 1.5hr）",
-      "day_en": "FRI",
-      "region_class": "r-matsuyama",
-      "date": "5/22",
-      "transport_icon": "🚌",
       "spots": [
         {
           "name": "今治城",
@@ -559,8 +583,6 @@
           "maps": "https://maps.google.com/?q=Dogo+Onsen+Shopping+Street+Matsuyama"
         }
       ],
-      "region": "今治 / 松山",
-      "title": "大三島 → 今治 → 松山",
       "section_label": "景點行程",
       "hotels": [
         {
@@ -569,18 +591,26 @@
           "maps": "https://maps.google.com/?q=Comfort+Hotel+Matsuyama+Ehime",
           "members": []
         }
-      ]
+      ],
+      "date_info": {
+        "date": "5/22",
+        "day_en": "FRI"
+      },
+      "title_info": {
+        "day_num": "Day 6",
+        "title": "大三島 → 今治 → 松山",
+        "region": "今治 / 松山",
+        "region_class": "r-matsuyama"
+      },
+      "transport": {
+        "icon": "🚌",
+        "text": "大三島 → 今治巴士總站 → 伊予鐵道至松山市區（巴士+電車約 1.5hr）"
+      }
     },
     {
       "notes": [
         "💡 <strong>建議交通：</strong>搭松山→廣島高速船，可沿途欣賞瀨戶內海島嶼風光，比坐電車有趣許多。船票約 7000 円，需提前預訂。"
       ],
-      "day_num": "Day 7",
-      "transport": "推薦：松山觀光港 → 廣島港（高速船 70 分）→ JR 至三原 / 或 JR 陸路至三原",
-      "day_en": "SAT",
-      "region_class": "r-mihara",
-      "date": "5/23",
-      "transport_icon": "🚢",
       "spots": [
         {
           "name": "坂の上の雲博物館",
@@ -629,8 +659,6 @@
           "maps": "https://maps.google.com/?q=Mihara+Castle+Ruins+Hiroshima"
         }
       ],
-      "region": "松山 / 三原",
-      "title": "松山自由行 → 三原",
       "section_label": "景點行程",
       "hotels": [
         {
@@ -639,16 +667,24 @@
           "maps": "https://maps.google.com/?q=Super+Hotel+Mihara+Station+Hiroshima",
           "members": []
         }
-      ]
+      ],
+      "date_info": {
+        "date": "5/23",
+        "day_en": "SAT"
+      },
+      "title_info": {
+        "day_num": "Day 7",
+        "title": "松山自由行 → 三原",
+        "region": "松山 / 三原",
+        "region_class": "r-mihara"
+      },
+      "transport": {
+        "icon": "🚢",
+        "text": "推薦：松山觀光港 → 廣島港（高速船 70 分）→ JR 至三原 / 或 JR 陸路至三原"
+      }
     },
     {
       "notes": [],
-      "day_num": "Day 8",
-      "transport": "三原站 → 廣島空港 利木津巴士 約 30 分｜建議 09:30 前抵達機場",
-      "day_en": "SUN",
-      "region_class": "r-flight",
-      "date": "5/24",
-      "transport_icon": "🚌",
       "spots": [
         {
           "name": "廣島機場免稅區",
@@ -662,11 +698,23 @@
           "maps": "https://maps.google.com/?q=Hiroshima+Airport"
         }
       ],
-      "region": "三原 → 廣島機場",
-      "title": "返回台灣",
       "section_label": "行前準備",
       "show_return_flight": true,
-      "hotels": []
+      "hotels": [],
+      "date_info": {
+        "date": "5/24",
+        "day_en": "SUN"
+      },
+      "title_info": {
+        "day_num": "Day 8",
+        "title": "返回台灣",
+        "region": "三原 → 廣島機場",
+        "region_class": "r-flight"
+      },
+      "transport": {
+        "icon": "🚌",
+        "text": "三原站 → 廣島空港 利木津巴士 約 30 分｜建議 09:30 前抵達機場"
+      }
     }
   ]
 }

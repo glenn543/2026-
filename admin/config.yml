@@ -93,27 +93,39 @@ collections:
           - label: 每天行程
             name: days
             widget: list
-            summary: "{{fields.date}} {{fields.day_en}} · {{fields.title}}"
+            summary: "{{fields.date_info.date}} {{fields.date_info.day_en}} · {{fields.title_info.title}}"
             fields:
-              - {label: 日期（如 5/17）, name: date, widget: string}
-              - {label: 星期英文（如 SUN）, name: day_en, widget: string}
-              - {label: 天數（如 Day 1）, name: day_num, widget: string}
-              - {label: 當天標題, name: title, widget: string}
-              - {label: 地區名稱, name: region, widget: string}
-              - label: 地區色彩樣式
-                name: region_class
-                widget: select
-                options:
-                  - {label: 廣島市（紅）, value: r-hiroshima}
-                  - {label: 吳市（藍灰）, value: r-kure}
-                  - {label: 宮島（朱紅）, value: r-miyajima}
-                  - {label: 尾道（褐）, value: r-onomichi}
-                  - {label: 島波海道（橙）, value: r-shimanami}
-                  - {label: 松山（綠）, value: r-matsuyama}
-                  - {label: 三原（深藍）, value: r-mihara}
-                  - {label: 航班（灰）, value: r-flight}
-              - {label: 交通圖示（emoji）, name: transport_icon, widget: string}
-              - {label: 交通說明, name: transport, widget: string}
+              - label: 日期
+                name: date_info
+                widget: object
+                fields:
+                  - {label: 日期, name: date, widget: string}
+                  - {label: 星期英文, name: day_en, widget: string}
+              - label: 標題資訊
+                name: title_info
+                widget: object
+                fields:
+                  - {label: 天數, name: day_num, widget: string}
+                  - {label: 當天標題, name: title, widget: string}
+                  - {label: 地區名稱, name: region, widget: string}
+                  - label: 地區色彩樣式
+                    name: region_class
+                    widget: select
+                    options:
+                      - {label: 廣島市（紅）, value: r-hiroshima}
+                      - {label: 吳市（藍灰）, value: r-kure}
+                      - {label: 宮島（朱紅）, value: r-miyajima}
+                      - {label: 尾道（褐）, value: r-onomichi}
+                      - {label: 島波海道（橙）, value: r-shimanami}
+                      - {label: 松山（綠）, value: r-matsuyama}
+                      - {label: 三原（深藍）, value: r-mihara}
+                      - {label: 航班（灰）, value: r-flight}
+              - label: 交通
+                name: transport
+                widget: object
+                fields:
+                  - {label: 交通圖示（emoji）, name: icon, widget: string}
+                  - {label: 交通說明, name: text, widget: string}
               - label: 住宿
                 name: hotels
                 widget: list
@@ -122,7 +134,7 @@ collections:
                   - {label: 飯店名稱, name: name, widget: string}
                   - {label: 地址, name: addr, widget: string}
                   - {label: Google Maps 連結, name: maps, widget: string}
-                  - label: 入住成員（選填，Day 5 使用）
+                  - label: 入住成員（選填）
                     name: members
                     widget: list
                     required: false
@@ -132,32 +144,29 @@ collections:
                 widget: list
                 required: false
                 field: {label: 備注內容, name: text, widget: text}
-              - {label: 景點區塊標題（如 推薦景點）, name: section_label, widget: string}
+              - {label: 景點區塊標題, name: section_label, widget: string}
               - label: 景點列表
                 name: spots
                 widget: list
                 summary: "{{fields.time}} · {{fields.name}}"
                 fields:
+                  - {label: 圖片網址（可留空）, name: img, widget: string, required: false}
+                  - {label: 時間標籤, name: time, widget: string}
                   - {label: 景點名稱, name: name, widget: string}
                   - {label: 英文名稱, name: en, widget: string}
-                  - {label: 時間標籤（如 下午、9:00）, name: time, widget: string}
-                  - {label: 圖片網址（可留空）, name: img, widget: string, required: false}
                   - {label: 景點描述, name: desc, widget: text}
                   - label: 標籤
                     name: tags
-                    widget: list
-                    field:
-                      label: 標籤
-                      name: tag
-                      widget: select
-                      options:
-                        - {label: ⭐ 必訪, value: 必訪}
-                        - {label: 🏛 歷史, value: 歷史}
-                        - {label: 🍜 美食, value: 美食}
-                        - {label: 🍰 甜點, value: 甜點}
-                        - {label: ☕ 咖啡, value: 咖啡}
-                        - {label: 🍳 早午餐, value: 早午餐}
-                        - {label: 🎨 藝術, value: 藝術}
-                        - {label: 🌿 自然, value: 自然}
-                        - {label: 🎯 體驗, value: 體驗}
+                    widget: select
+                    multiple: true
+                    options:
+                      - {label: ⭐ 必訪, value: 必訪}
+                      - {label: 🏛 歷史, value: 歷史}
+                      - {label: 🍜 美食, value: 美食}
+                      - {label: 🍰 甜點, value: 甜點}
+                      - {label: ☕ 咖啡, value: 咖啡}
+                      - {label: 🍳 早午餐, value: 早午餐}
+                      - {label: 🎨 藝術, value: 藝術}
+                      - {label: 🌿 自然, value: 自然}
+                      - {label: 🎯 體驗, value: 體驗}
                   - {label: Google Maps 連結, name: maps, widget: string}

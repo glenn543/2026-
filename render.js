@@ -144,16 +144,16 @@ function renderDay(day, index) {
   return `<section class="day-section visible" id="day${index+1}"${isFirst ? ' style="margin-top:3.5rem;"' : ''}>
     <div class="day-header">
       <div class="day-badge"${badgeStyle}>
-        <span class="day-badge-date">${day.date}</span>
-        <span class="day-badge-day">${day.day_en}</span>
+        <span class="day-badge-date">${day.date_info.date}</span>
+        <span class="day-badge-day">${day.date_info.day_en}</span>
       </div>
       <div class="day-header-text">
-        <div class="day-num-label">${day.day_num}</div>
-        <h2 class="day-title">${day.title}</h2>
-        <span class="day-region-badge ${day.region_class}">${day.region}</span>
+        <div class="day-num-label">${day.title_info.day_num}</div>
+        <h2 class="day-title">${day.title_info.title}</h2>
+        <span class="day-region-badge ${day.title_info.region_class}">${day.title_info.region}</span>
       </div>
     </div>
-    <div class="transport-bar"><span class="transport-icon">${day.transport_icon}</span> ${day.transport}</div>
+    <div class="transport-bar"><span class="transport-icon">${day.transport.icon}</span> ${day.transport.text}</div>
     ${hotels}
     ${notes}
     ${returnFlight}
