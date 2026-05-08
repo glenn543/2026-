@@ -93,6 +93,7 @@ collections:
           - label: 每天行程
             name: days
             widget: list
+            summary: "{{fields.date}} {{fields.day_en}} · {{fields.title}}"
             fields:
               - {label: 日期（如 5/17）, name: date, widget: string}
               - {label: 星期英文（如 SUN）, name: day_en, widget: string}
@@ -116,6 +117,7 @@ collections:
               - label: 住宿
                 name: hotels
                 widget: list
+                summary: "🏨 {{fields.name}}"
                 fields:
                   - {label: 飯店名稱, name: name, widget: string}
                   - {label: 地址, name: addr, widget: string}
@@ -134,6 +136,7 @@ collections:
               - label: 景點列表
                 name: spots
                 widget: list
+                summary: "{{fields.time}} · {{fields.name}}"
                 fields:
                   - {label: 景點名稱, name: name, widget: string}
                   - {label: 英文名稱, name: en, widget: string}
