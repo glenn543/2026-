@@ -17,7 +17,7 @@
     {
       "notes": [],
       "day_num": "Day 1",
-      "transport": "廣島機場 → 市區廣島巴士中心 約 45 分，或搭計程車約 35 分",
+      "transport": "<a href=\"https://www.hij.airport.jp/tw/access/timetable/\" target=\"_blank\" style=\"color:inherit;\">廣島機場 → 市區廣島</a> 約 45 分，或搭計程車約 35 分",
       "day_en": "SUN",
       "region_class": "r-hiroshima",
       "date": "5/17",
@@ -206,7 +206,7 @@
             "必訪",
             "藝術"
           ],
-          "maps": "https://maps.google.com/?q=Shimonoseki+Museum+of+Art+Kage+Hiroshima"
+          "maps": "https://maps.app.goo.gl/kru4ukwPZ3FqhwLF6"
         },
         {
           "name": "嚴島神社",
