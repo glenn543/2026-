@@ -196,9 +196,12 @@ function initNavHighlight() {
   update();
 }
 
-fetch('/content.json')
-  .then(r => r.json())
-  .then(data => {
+Promise.all([
+  fetch('/settings.json').then(r => r.json()),
+  fetch('/content.json').then(r => r.json())
+])
+  .then(([settings, content]) => {
+    const data = { ...settings, ...content };
     window._TRIP_DATA = data;
     document.getElementById('hero-slot').innerHTML = renderHero(data);
     document.getElementById('nav-slot').innerHTML = renderNav(data);

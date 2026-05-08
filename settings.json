@@ -1,0 +1,112 @@
+{
+  "footer_dates": "5/17 — 5/24 · 8 天 7 夜 · 廣島 / 吳市 / 宮島 / 尾道 / 島波海道 / 松山 / 三原",
+  "nav_brand": "廣島 2026",
+  "nav_days": [
+    "5/17 日",
+    "5/18 一",
+    "5/19 二",
+    "5/20 三",
+    "5/21 四",
+    "5/22 五",
+    "5/23 六",
+    "5/24 日"
+  ],
+  "footer_title": "廣島・愛媛 旅遊手冊 2026",
+  "footer_note": "地圖連結由 Google Maps 提供。景點資訊僅供參考，請出發前再次確認。",
+  "pickup_groups": [
+    {
+      "label": "🚗 第一車 · 台北出發 · 7人",
+      "type": "stops",
+      "stops": [
+        {
+          "time": "4:00",
+          "location": "辛亥",
+          "count": "接送 2 人",
+          "contact": "Hauzhen",
+          "alert": "",
+          "members": [
+            "Hauzhen",
+            "qin"
+          ]
+        },
+        {
+          "time": "4:15",
+          "location": "光復南路",
+          "count": "接送 5 人",
+          "contact": "Jay Tseng",
+          "alert": "⚠️ 報「王先生」",
+          "members": [
+            "XiaoRu",
+            "Jay Tseng",
+            "Pei-Shan Hung",
+            "蝌蚪",
+            "曼巴"
+          ]
+        }
+      ]
+    },
+    {
+      "label": "🚗 第二車 · 台北出發 · 4人",
+      "type": "stops",
+      "stops": [
+        {
+          "time": "4:00",
+          "location": "東湖",
+          "count": "接送 2 人",
+          "contact": "Prolong Lai",
+          "alert": "",
+          "members": [
+            "Prolong Lai",
+            "littleherry"
+          ]
+        },
+        {
+          "time": "4:15",
+          "location": "光復南路",
+          "count": "接送 2 人",
+          "contact": "alex",
+          "alert": "⚠️ 報「倪小姐」",
+          "members": [
+            "alex",
+            "阿蓓"
+          ]
+        }
+      ]
+    },
+    {
+      "label": "🚗 第三團 · 新竹出發 · 4人",
+      "type": "self",
+      "self_note": "🗺️ <strong>4:00</strong>　Glenn、Yen 兩人各自前往機場集合<br>🗺️ <strong>4:00</strong>　ida、IO 兩人各自前往機場集合"
+    }
+  ],
+  "footer_airline": "中華航空 CI · 桃園 ⇄ 廣島",
+  "hero": {
+    "eyebrow": "Travel Guide · May 2026",
+    "title": "廣島",
+    "subtitle": "Hiroshima · Kure · Miyajima · Onomichi · Shimanami · Matsuyama",
+    "pills": [
+      "5/17 — 5/24",
+      "8 天 7 夜",
+      "中華航空 CI",
+      "廣島 ⇄ 桃園",
+      "叁式員旅"
+    ]
+  },
+  "pickup_subtitle": "出發日 5/17 · 桃園機場集合，共四組",
+  "flight_outbound": {
+    "airline": "中華航空 CI",
+    "dep_time": "7:15",
+    "dep_city": "桃園 TPE",
+    "arr_time": "10:35",
+    "arr_city": "廣島 HIJ",
+    "duration": "約 1h 20m"
+  },
+  "flight_return": {
+    "airline": "中華航空 CI",
+    "dep_time": "11:35",
+    "dep_city": "廣島 HIJ",
+    "arr_time": "13:15",
+    "arr_city": "桃園 TPE",
+    "duration": "約 1h 40m"
+  }
+}

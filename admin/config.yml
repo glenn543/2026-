@@ -12,7 +12,7 @@ collections:
     files:
       - name: main
         label: 主要設定（航班、接送）
-        file: content.json
+        file: settings.json
         format: json
         fields:
           - label: 去程航班
