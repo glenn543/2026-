@@ -828,9 +828,11 @@
 
   /* 節省模式時隱藏所有圖片區塊 */
   body.data-saving .spot-img-wrap { display: none; }
+  /* 備援：沒有 src 的圖片一律不顯示（防破圖） */
+  img.spot-img:not([src]) { display: none; }
 </style>
 </head>
-<body>
+<body class="data-saving">
 
 <!-- HERO -->
 <section class="hero">
@@ -2107,7 +2109,7 @@
 </main>
 
 <button class="ds-btn" id="dsBtn" onclick="toggleDataSaver()">
-  <span id="dsIcon">📶</span><span id="dsLabel">顯示圖片</span>
+  <span id="dsIcon">🖼️</span><span id="dsLabel">顯示圖片</span>
 </button>
 
 <footer>
@@ -2161,7 +2163,7 @@
 
     if (saving) {
       document.body.classList.add('data-saving');
-      btn.querySelector('#dsIcon').textContent = '📶';
+      btn.querySelector('#dsIcon').textContent = '🖼️';
       btn.querySelector('#dsLabel').textContent = '顯示圖片';
       btn.classList.remove('loaded');
       if (heroPhoto) heroPhoto.style.backgroundImage = 'none';
