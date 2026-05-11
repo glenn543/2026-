@@ -54,7 +54,6 @@
 
   .hero-photo {
     position: absolute; inset: 0;
-    background-image: url('https://images.unsplash.com/photo-1480796927426-f609979314bd?w=1600&q=80');
     background-size: cover;
     background-position: center 40%;
     opacity: 0.28;
@@ -802,13 +801,61 @@
   border-radius: 20px; padding: 2px 9px; white-space: nowrap;
 }
 
+
+  /* ── DATA SAVER ── */
+  .ds-btn {
+    position: fixed;
+    top: 10px;
+    right: 14px;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 7px 14px;
+    border: none;
+    border-radius: 100px;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.22);
+    transition: background 0.2s, color 0.2s;
+    white-space: nowrap;
+    background: var(--ink);
+    color: #fff;
+  }
+  .ds-btn.loaded { background: var(--red-dark); }
+
+  /* placeholder 格子（圖片未載入時） */
+  .spot-img-wrap:not(.img-loaded) {
+    aspect-ratio: 4 / 3;
+    background: var(--paper-warm);
+    border-radius: 12px 12px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .spot-img-wrap:not(.img-loaded)::after {
+    content: '📷';
+    font-size: 22px;
+    opacity: 0.25;
+  }
+
+  /* 圖片載入後正常顯示 */
+  .spot-img-wrap.img-loaded .spot-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .spot-img-wrap.img-loaded::after { display: none; }
 </style>
 </head>
 <body>
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-photo"></div>
+  <div class="hero-photo" data-bg="https://images.unsplash.com/photo-1480796927426-f609979314bd?w=600&q=75"></div>
   <div class="hero-pattern"></div>
   <div class="hero-circle hero-circle-1"></div>
   <div class="hero-circle hero-circle-2"></div>
@@ -1019,7 +1066,7 @@
     <div class="spots-grid">
 
       <div class="spot-card" data-primary="must">
-        <div class="spot-img-wrap"><img class="spot-img" src="https://wp-odai.wamazing.com/media/wp-content/uploads/sites/2/2021/12/hiroshimapeacememorialpark_078404ed17aaf1b212072d1ddaca6ba2_m.jpg.webp" alt="原爆圓頂館" loading="lazy"></div>
+        <div class="spot-img-wrap"><img class="spot-img" data-src="https://wp-odai.wamazing.com/media/wp-content/uploads/sites/2/2021/12/hiroshimapeacememorialpark_078404ed17aaf1b212072d1ddaca6ba2_m.jpg.webp" alt="原爆圓頂館" loading="lazy"></div>
         <div class="spot-time-badge">下午</div>
         <div class="spot-name">原爆圓頂館</div>
         <div class="spot-en">Atomic Bomb Dome</div>
@@ -1034,7 +1081,7 @@
       </div>
 
       <div class="spot-card" data-primary="must">
-		<div class="spot-img-wrap"><img class="spot-img" src="https://www.agoda.com/wp-content/uploads/2024/01/Featured-image-Hiroshima-Peace-Memorial-Park-1244x700.jpg" alt="廣島和平紀念公園" loading="lazy"></div>
+		<div class="spot-img-wrap"><img class="spot-img" data-src="https://www.agoda.com/wp-content/uploads/2024/01/Featured-image-Hiroshima-Peace-Memorial-Park-1244x700.jpg" alt="廣島和平紀念公園" loading="lazy"></div>
         <div class="spot-time-badge">下午</div>
         <div class="spot-name">廣島和平紀念公園</div>
         <div class="spot-en">Peace Memorial Park</div>
@@ -1049,7 +1096,7 @@
       </div>
 
       <div class="spot-card" data-primary="history">
-        <div class="spot-img-wrap"><img class="spot-img" src="https://res.klook.com/images/w_1200,h_630,c_fill,q_65/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/x72bq26pfpao1daonid5/%E5%BB%A3%E5%B3%B6%E5%92%8C%E5%B9%B3%E7%B4%80%E5%BF%B5%E8%B3%87%E6%96%99%E9%A4%A8%E5%B8%B8%E8%A8%AD%E5%B1%95%E8%A6%BD%E9%96%80%E7%A5%A8-Klook%E5%AE%A2%E8%B7%AF.jpg" alt="和平紀念資料館" loading="lazy"></div>
+        <div class="spot-img-wrap"><img class="spot-img" data-src="https://res.klook.com/images/w_600,h_315,c_fill,q_65/w_40,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/x72bq26pfpao1daonid5/%E5%BB%A3%E5%B3%B6%E5%92%8C%E5%B9%B3%E7%B4%80%E5%BF%B5%E8%B3%87%E6%96%99%E9%A4%A8%E5%B8%B8%E8%A8%AD%E5%B1%95%E8%A6%BD%E9%96%80%E7%A5%A8-Klook%E5%AE%A2%E8%B7%AF.jpg" alt="和平紀念資料館" loading="lazy"></div>
         <div class="spot-time-badge">下午</div>
         <div class="spot-name">和平紀念資料館</div>
         <div class="spot-en">Peace Memorial Museum</div>
@@ -1064,8 +1111,8 @@
       </div>
 
 		<div class="spot-card" data-primary="activity">
-        <div class="spot-img-wrap"><img class="spot-img" src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAFabWNgIKuqLHP64-bIBquEvSObjmhLWTtKH7HEZisgxRw47n9zrAiwf7mF1suPa1iqsDZhzxBlMnfLcpZuDFQPQ1ObnsiCizfZrQ8s7RuyoUNW395WmLuBjzkf8ucVggMX5TF2pg=w408-h272-k-no" alt="紙鶴塔" loading="lazy"></div>
-        <div class="spot-time-badge">黃昏</div>
+        <div class="spot-img-wrap"><img class="spot-img" data-src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAFabWNgIKuqLHP64-bIBquEvSObjmhLWTtKH7HEZisgxRw47n9zrAiwf7mF1suPa1iqsDZhzxBlMnfLcpZuDFQPQ1ObnsiCizfZrQ8s7RuyoUNW395WmLuBjzkf8ucVggMX5TF2pg=w408-h272-k-no" alt="紙鶴塔" loading="lazy"></div>
+        <div class="spot-time-badge">下午</div>
         <div class="spot-name">紙鶴塔</div>
         <div class="spot-en">Peace Memorial Museum</div>
         <div class="spot-desc">頂樓(RF)廣島之丘展望台，開放式空間欣賞最佳風景。12樓紙鶴廣場：體驗摺紙鶴(付費)，並將完成的紙鶴投入「紙鶴牆」，入場費 2,200 円。</div>
@@ -1079,7 +1126,7 @@
       </div>
 
       <div class="spot-card" data-primary="food">
-		<div class="spot-img-wrap"><img class="spot-img" src="https://resources.matcha-jp.com/resize/720x2000/2018/11/26-66768.webp" alt="本通商店街" loading="lazy"></div>
+		<div class="spot-img-wrap"><img class="spot-img" data-src="https://resources.matcha-jp.com/resize/600x800/2018/11/26-66768.webp" alt="本通商店街" loading="lazy"></div>
         <div class="spot-time-badge">傍晚</div>
         <div class="spot-name">本通商店街</div>
         <div class="spot-en">Hondori Shopping Street</div>
@@ -1095,7 +1142,7 @@
 
 
 		<div class="spot-card" data-primary="food">
-		<div class="spot-img-wrap"><img class="spot-img" src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAETtc1EZcguupjS-ljtbPLLC8Y6qG7H09ec6HpYkbC5J7yVqyNVbz_IMs6eDU1fpE5O3oOzET9wCGh_9acQ9GnQJQjerN8d8OMiBAsKzNsF-75GG9K9P3DqjjDeVckZAnsQMMBbjQ=w408-h272-k-no" alt="雑貨店 LISU LISU" loading="lazy"></div>
+		<div class="spot-img-wrap"><img class="spot-img" data-src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAETtc1EZcguupjS-ljtbPLLC8Y6qG7H09ec6HpYkbC5J7yVqyNVbz_IMs6eDU1fpE5O3oOzET9wCGh_9acQ9GnQJQjerN8d8OMiBAsKzNsF-75GG9K9P3DqjjDeVckZAnsQMMBbjQ=w408-h272-k-no" alt="雑貨店 LISU LISU" loading="lazy"></div>
         <div class="spot-time-badge">傍晚</div>
         <div class="spot-name">雑貨店 LISU LISU</div>
         <div class="spot-en">LISU LISU</div>
@@ -1110,7 +1157,7 @@
       </div>
 
       <div class="spot-card" data-primary="must">
-		<div class="spot-img-wrap"><img class="spot-img" src="https://i0.wp.com/journey.tw/wp-content/uploads/2024/10/20241024024035_0_db5add.jpg?resize=1100%2C732&quality=99&ssl=1" alt="廣島燒 お好み村" loading="lazy"></div>
+		<div class="spot-img-wrap"><img class="spot-img" data-src="https://i0.wp.com/journey.tw/wp-content/uploads/2024/10/20241024024035_0_db5add.jpg?resize=600%2C400&quality=75&ssl=1" alt="廣島燒 お好み村" loading="lazy"></div>
         <div class="spot-time-badge">晚餐</div>
         <div class="spot-name">廣島燒 お好み村</div>
         <div class="spot-en">Okonomimura Village</div>
@@ -1125,7 +1172,7 @@
       </div>
 
 		<div class="spot-card" data-primary="must">
-		<div class="spot-img-wrap"><img class="spot-img" src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAHDl08A22-OqyIUHg-PFrInAjPhsUjDHutmR_hYMZm_auZUZ6awWtAwNjuycg-wdtDWZpw4Ng4VDsyYPaF_N-G6oAgHGv3M7fyh90YGZKRV4D4fA-nMZIzs4hkufaaKOR_7aCAB7Go9EgPo=w408-h306-k-no" alt="廣島燒 お好み村" loading="lazy"></div>
+		<div class="spot-img-wrap"><img class="spot-img" data-src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAHDl08A22-OqyIUHg-PFrInAjPhsUjDHutmR_hYMZm_auZUZ6awWtAwNjuycg-wdtDWZpw4Ng4VDsyYPaF_N-G6oAgHGv3M7fyh90YGZKRV4D4fA-nMZIzs4hkufaaKOR_7aCAB7Go9EgPo=w408-h306-k-no" alt="廣島燒 お好み村" loading="lazy"></div>
         <div class="spot-time-badge">晚餐</div>
         <div class="spot-name">五衛門 胡町本店</div>
         <div class="spot-en">Goemon Ebisucho</div>
@@ -1140,7 +1187,7 @@
       </div>
 
 		<div class="spot-card" data-primary="must">
-		<div class="spot-img-wrap"><img class="spot-img" src="https://digjapan.travel/files/topics/8246_ext_02_1.jpg" alt="廣島牡蠣船 かなわ" loading="lazy"></div>
+		<div class="spot-img-wrap"><img class="spot-img" data-src="https://digjapan.travel/files/topics/8246_ext_02_1.jpg" alt="廣島牡蠣船 かなわ" loading="lazy"></div>
         <div class="spot-time-badge">晚餐</div>
         <div class="spot-name">廣島牡蠣船 かなわ</div>
         <div class="spot-en">Oyster ship Kanawa</div>
@@ -1192,7 +1239,7 @@
     <div class="spots-grid">
 
       <div class="spot-card" data-primary="must">
-		<div class="spot-img-wrap"><img class="spot-img" src="https://www.mazda.com.tw/globalassets/mazda/mazda-stories/08_-mazda-/mazda_stories_2.jpg" alt="Mazda 博物館" loading="lazy"></div>
+		<div class="spot-img-wrap"><img class="spot-img" data-src="https://www.mazda.com.tw/globalassets/mazda/mazda-stories/08_-mazda-/mazda_stories_2.jpg" alt="Mazda 博物館" loading="lazy"></div>
         <div class="spot-time-badge">9:00</div>
         <div class="spot-name">Mazda 博物館</div>
         <div class="spot-en">Mazda Museum</div>
@@ -1207,7 +1254,7 @@
       </div>
 
       <div class="spot-card" data-primary="must">
-		<div class="spot-img-wrap"><img class="spot-img" src="https://cdn.japan-travel-note.com/images/00106/thumbnail-en-541x284.webp" alt="大和博物館" loading="lazy"></div>
+		<div class="spot-img-wrap"><img class="spot-img" data-src="https://cdn.japan-travel-note.com/images/00106/thumbnail-en-541x284.webp" alt="大和博物館" loading="lazy"></div>
         <div class="spot-time-badge">13:00</div>
         <div class="spot-name">大和博物館</div>
         <div class="spot-en">Yamato Museum, Kure</div>
@@ -1222,7 +1269,7 @@
       </div>
 
       <div class="spot-card" data-primary="must">
-		<div class="spot-img-wrap"><img class="spot-img" src="https://static.gltjp.com/glt/data/directory/13000/12506/20220109_114250_94b09204_w1920.webp" alt="鐵のくじら館" loading="lazy"></div>
+		<div class="spot-img-wrap"><img class="spot-img" data-src="https://static.gltjp.com/glt/data/directory/13000/12506/20220109_114250_94b09204_w600.webp" alt="鐵のくじら館" loading="lazy"></div>
         <div class="spot-time-badge">14:30</div>
         <div class="spot-name">鐵のくじら館</div>
         <div class="spot-en">Iron Whale Museum</div>
@@ -1237,7 +1284,7 @@
       </div>
 
       <div class="spot-card" data-primary="history">
-		<div class="spot-img-wrap"><img class="spot-img" src="https://assets.sparkle.travel/place/82856438-dc5c-11ee-9b39-c7c8948f11a7/0jbdiq/640x427ablur.jpg" alt="入船山記念館" loading="lazy"></div>
+		<div class="spot-img-wrap"><img class="spot-img" data-src="https://assets.sparkle.travel/place/82856438-dc5c-11ee-9b39-c7c8948f11a7/0jbdiq/640x427ablur.jpg" alt="入船山記念館" loading="lazy"></div>
         <div class="spot-time-badge">15:30</div>
         <div class="spot-name">入船山記念館</div>
         <div class="spot-en">Irifuneyama Memorial Museum</div>
@@ -1252,7 +1299,7 @@
       </div>
 
       <div class="spot-card" data-primary="nature">
-		<div class="spot-img-wrap"><img class="spot-img" src="https://d1grca2t3zpuug.cloudfront.net/2022/12/22kureshi9.jpg" alt="吳港灣散步" loading="lazy"></div>
+		<div class="spot-img-wrap"><img class="spot-img" data-src="https://d1grca2t3zpuug.cloudfront.net/2022/12/22kureshi9.jpg" alt="吳港灣散步" loading="lazy"></div>
         <div class="spot-time-badge">16:30</div>
         <div class="spot-name">吳港灣散步</div>
         <div class="spot-en">Kure Port Promenade</div>
@@ -1267,7 +1314,7 @@
       </div>
 
  <div class="spot-card" data-primary="food">
-		<div class="spot-img-wrap"><img class="spot-img" src="https://wp-odai.wamazing.com/media/wp-content/uploads/sites/2/2023/01/hiroshimakure_image10.jpg.webp" alt="煉瓦通商店街" loading="lazy"></div>
+		<div class="spot-img-wrap"><img class="spot-img" data-src="https://wp-odai.wamazing.com/media/wp-content/uploads/sites/2/2023/01/hiroshimakure_image10.jpg.webp" alt="煉瓦通商店街" loading="lazy"></div>
         <div class="spot-time-badge">17:30</div>
         <div class="spot-name">煉瓦通商店街</div>
         <div class="spot-en">Shopping mall in Kure</div>
@@ -1321,7 +1368,7 @@
     <div class="spots-grid">
 
       <div class="spot-card" data-primary="must">
-		<div class="spot-img-wrap"><img class="spot-img" src="https://image-cdn.hypb.st/https%3A%2F%2Fpopbee.com%2Fimage%2F2024%2F12%2Fthe-worlds-most-beautiful-museums-simose-art-museum-hiroshima-japan15.jpg?w=1260&cbr=1&q=90&fit=max" alt="下瀨美術館" loading="lazy"></div>
+		<div class="spot-img-wrap"><img class="spot-img" data-src="https://image-cdn.hypb.st/https%3A%2F%2Fpopbee.com%2Fimage%2F2024%2F12%2Fthe-worlds-most-beautiful-museums-simose-art-museum-hiroshima-japan15.jpg?w=600&cbr=1&q=75&fit=max" alt="下瀨美術館" loading="lazy"></div>
         <div class="spot-time-badge">9:30</div>
         <div class="spot-name">下瀨美術館</div>
         <div class="spot-en">Kage Museum of Art</div>
@@ -1336,7 +1383,7 @@
       </div>
 
       <div class="spot-card" data-primary="must">
-        <div class="spot-img-wrap"><img class="spot-img" src="https://wattention.com/tw/wp-content/uploads/2023/01/Itsukushima-Shrine-%E2%80%93-Hiroshima-4.jpg" alt="嚴島神社" loading="lazy"></div>
+        <div class="spot-img-wrap"><img class="spot-img" data-src="https://wattention.com/tw/wp-content/uploads/2023/01/Itsukushima-Shrine-%E2%80%93-Hiroshima-4.jpg" alt="嚴島神社" loading="lazy"></div>
         <div class="spot-time-badge">午餐後</div>
         <div class="spot-name">嚴島神社</div>
         <div class="spot-en">Itsukushima Shrine</div>
@@ -1351,7 +1398,7 @@
       </div>
 
       <div class="spot-card" data-primary="food">
-		<div class="spot-img-wrap"><img class="spot-img" src="https://pic.pimg.tw/immegumi/1681055791-3233555511-g_l.jpg" alt="牡蠣料理街" loading="lazy"></div>
+		<div class="spot-img-wrap"><img class="spot-img" data-src="https://pic.pimg.tw/immegumi/1681055791-3233555511-g_l.jpg" alt="牡蠣料理街" loading="lazy"></div>
         <div class="spot-time-badge">午餐</div>
         <div class="spot-name">牡蠣料理街</div>
         <div class="spot-en">Oyster Street, Miyajima</div>
@@ -1366,7 +1413,7 @@
       </div>
 
       <div class="spot-card" data-primary="history">
-		<div class="spot-img-wrap"><img class="spot-img" src="https://tw.tabiiro.travel/lpimg/leisure/206381/main/img4.jpg" alt="大聖院" loading="lazy"></div>
+		<div class="spot-img-wrap"><img class="spot-img" data-src="https://tw.tabiiro.travel/lpimg/leisure/206381/main/img4.jpg" alt="大聖院" loading="lazy"></div>
         <div class="spot-time-badge">下午</div>
         <div class="spot-name">大聖院</div>
         <div class="spot-en">Daisho-in Temple</div>
@@ -1381,7 +1428,7 @@
       </div>
 
 		     <div class="spot-card" data-primary="history">
-		<div class="spot-img-wrap"><img class="spot-img" src="https://hit-product-resources-public.s3.ap-northeast-1.amazonaws.com/images/1450/rto93sdlAzDZrby7iYrA/large.jpg" alt="豐國神社 千疊閣" loading="lazy"></div>
+		<div class="spot-img-wrap"><img class="spot-img" data-src="https://hit-product-resources-public.s3.ap-northeast-1.amazonaws.com/images/1450/rto93sdlAzDZrby7iYrA/large.jpg" alt="豐國神社 千疊閣" loading="lazy"></div>
         <div class="spot-time-badge">下午</div>
         <div class="spot-name">豐國神社 千疊閣</div>
         <div class="spot-en">Toyokuni Shrine (Senjokaku Pavilion)</div>
@@ -1396,7 +1443,7 @@
       </div>
 
       <div class="spot-card" data-primary="nature">
-		<div class="spot-img-wrap"><img class="spot-img" src="https://d1grca2t3zpuug.cloudfront.net/2025/06/26648379_m-870x500-1749609920.webp" alt="彌山登山" loading="lazy"></div>
+		<div class="spot-img-wrap"><img class="spot-img" data-src="https://d1grca2t3zpuug.cloudfront.net/2025/06/26648379_m-870x500-1749609920.webp" alt="彌山登山" loading="lazy"></div>
         <div class="spot-time-badge">下午</div>
         <div class="spot-name">彌山登山</div>
         <div class="spot-en">Mt. Misen Hiking</div>
@@ -1411,7 +1458,7 @@
       </div>
 
 		 <div class="spot-card" data-primary="food">
-		<div class="spot-img-wrap"><img class="spot-img" src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAGwXqepsemkbqq6MLAtsRY46Oux_j5YAvj-RgyD8U-RsmRHQp1oyGPJwkRC1lNTWRvTEueaC20G32AUJMhwNC3aBNJykS1wTXedII9UjChhchVgN_RDx5-ZWuMpcXpOIGaykwdYMoPUxl1G=w408-h544-k-no" alt="星鰻飯" loading="lazy"></div>
+		<div class="spot-img-wrap"><img class="spot-img" data-src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAGwXqepsemkbqq6MLAtsRY46Oux_j5YAvj-RgyD8U-RsmRHQp1oyGPJwkRC1lNTWRvTEueaC20G32AUJMhwNC3aBNJykS1wTXedII9UjChhchVgN_RDx5-ZWuMpcXpOIGaykwdYMoPUxl1G=w408-h544-k-no" alt="星鰻飯" loading="lazy"></div>
         <div class="spot-time-badge">美食</div>
         <div class="spot-name">星鰻飯</div>
         <div class="spot-en">Anagomeshi Ueno</div>
@@ -1463,7 +1510,7 @@
     <div class="spots-grid">
 
       <div class="spot-card" data-primary="must">
-        <div class="spot-img-wrap"><img class="spot-img" src="https://wp-odai.wamazing.com/media/wp-content/uploads/sites/2/2025/03/onomichidaytrip_pixta_97735162_M.jpg.webp" alt="千光寺・尾道" loading="lazy"></div>
+        <div class="spot-img-wrap"><img class="spot-img" data-src="https://wp-odai.wamazing.com/media/wp-content/uploads/sites/2/2025/03/onomichidaytrip_pixta_97735162_M.jpg.webp" alt="千光寺・尾道" loading="lazy"></div>
         <div class="spot-time-badge">下午</div>
         <div class="spot-name">千光寺</div>
         <div class="spot-en">Senkoji Temple</div>
@@ -1478,7 +1525,7 @@
       </div>
 
       <div class="spot-card" data-primary="must">
-		<div class="spot-img-wrap"><img class="spot-img" src="https://www.onomichi-hansei.com/sightseeing/item/nekonohosomichi.jpg" alt="貓之細道" loading="lazy"></div>
+		<div class="spot-img-wrap"><img class="spot-img" data-src="https://www.onomichi-hansei.com/sightseeing/item/nekonohosomichi.jpg" alt="貓之細道" loading="lazy"></div>
         <div class="spot-time-badge">下午</div>
         <div class="spot-name">貓之細道</div>
         <div class="spot-en">Cat's Alley</div>
@@ -1493,7 +1540,7 @@
       </div>
 
       <div class="spot-card" data-primary="food">
-		<div class="spot-img-wrap"><img class="spot-img" src="https://resources.matcha-jp.com/resize/720x2000/2019/08/30-84939.webp" alt="尾道本通商店街" loading="lazy"></div>
+		<div class="spot-img-wrap"><img class="spot-img" data-src="https://resources.matcha-jp.com/resize/600x800/2019/08/30-84939.webp" alt="尾道本通商店街" loading="lazy"></div>
         <div class="spot-time-badge">下午</div>
         <div class="spot-name">尾道本通商店街</div>
         <div class="spot-en">Onomichi Hondori</div>
@@ -1508,7 +1555,7 @@
       </div>
 
       <div class="spot-card" data-primary="nature">
-		  <div class="spot-img-wrap"><img class="spot-img" src="https://github.com/glenn543/2026-/blob/main/images/divehiroshima_feature_island_shimanami_img07.webp?raw=true" alt="尾道海峽" loading="lazy"></div>
+		  <div class="spot-img-wrap"><img class="spot-img" data-src="https://github.com/glenn543/2026-/blob/main/images/divehiroshima_feature_island_shimanami_img07.webp?raw=true" alt="尾道海峽" loading="lazy"></div>
         <div class="spot-time-badge">黃昏</div>
         <div class="spot-name">尾道海峽散步</div>
         <div class="spot-en">Onomichi Channel Walk</div>
@@ -1523,7 +1570,7 @@
       </div>
 
  <div class="spot-card" data-primary="food">
-	 <div class="spot-img-wrap"><img class="spot-img" src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAHhc5-Hz8snrt3i6Lz9parGmyPyYUBYI2HV1BfPnBQb8GsJNyQBJflUGsFEtacB6Ob0Uew0C1o9iuh_HDKqS5U1AEcCuHzE01tOFCHMfOL1L0AMxm-uebPicdArJiPkYgJ4RWQ=w426-h240-k-no" alt="兔兔庵" loading="lazy"></div>
+	 <div class="spot-img-wrap"><img class="spot-img" data-src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAHhc5-Hz8snrt3i6Lz9parGmyPyYUBYI2HV1BfPnBQb8GsJNyQBJflUGsFEtacB6Ob0Uew0C1o9iuh_HDKqS5U1AEcCuHzE01tOFCHMfOL1L0AMxm-uebPicdArJiPkYgJ4RWQ=w426-h240-k-no" alt="兔兔庵" loading="lazy"></div>
         <div class="spot-time-badge">白天</div>
         <div class="spot-name">兔兔庵</div>
         <div class="spot-en">Toto-an</div>
@@ -1538,7 +1585,7 @@
       </div>
 
 <div class="spot-card" data-primary="food">
-	<div class="spot-img-wrap"><img class="spot-img" src="https://pecomag.jp/wp-content/uploads/2022/12/d2c95ca91db9df08e86fdd45839b22ae.jpg" alt="ごはんと珈琲アルト" loading="lazy"></div>
+	<div class="spot-img-wrap"><img class="spot-img" data-src="https://pecomag.jp/wp-content/uploads/2022/12/d2c95ca91db9df08e86fdd45839b22ae.jpg" alt="ごはんと珈琲アルト" loading="lazy"></div>
         <div class="spot-time-badge">白天</div>
         <div class="spot-name">ごはんと珈琲アルト</div>
         <div class="spot-en">alto</div>
@@ -1553,7 +1600,7 @@
       </div>
 
 <div class="spot-card" data-primary="food">
-	<div class="spot-img-wrap"><img class="spot-img" src="https://littlesetouchi.jp/images/details/02/img_02.png" alt="尾道西土堂" loading="lazy"></div>
+	<div class="spot-img-wrap"><img class="spot-img" data-src="https://littlesetouchi.jp/images/details/02/img_02.png" alt="尾道西土堂" loading="lazy"></div>
         <div class="spot-time-badge">白天</div>
         <div class="spot-name">シェアキッチン尾道西土堂店</div>
         <div class="spot-en">Little Setouchi</div>
@@ -1568,7 +1615,7 @@
       </div>
 
 <div class="spot-card" data-primary="food">
-	<div class="spot-img-wrap"><img class="spot-img" src="https://uoharu-haruko.com/uoharu/en/img/mv.jpg" alt="岡村春子商店" loading="lazy"></div>
+	<div class="spot-img-wrap"><img class="spot-img" data-src="https://uoharu-haruko.com/uoharu/en/img/mv.jpg" alt="岡村春子商店" loading="lazy"></div>
         <div class="spot-time-badge">白天</div>
         <div class="spot-name">岡村春子商店-魚春</div>
         <div class="spot-en">Deli&Kitchen </div>
@@ -1583,7 +1630,7 @@
       </div>
 
 		<div class="spot-card" data-primary="food">
-			<div class="spot-img-wrap"><img class="spot-img" src="https://static.gltjp.com/glt/data/directory/12000/11353/20210107_094136_1914b540_w1920.webp" alt="U2" loading="lazy"></div>
+			<div class="spot-img-wrap"><img class="spot-img" data-src="https://static.gltjp.com/glt/data/directory/12000/11353/20210107_094136_1914b540_w600.webp" alt="U2" loading="lazy"></div>
         <div class="spot-time-badge">上午</div>
         <div class="spot-name">尾道 U2</div>
         <div class="spot-en">ONOMICHI U2</div>
@@ -1689,7 +1736,7 @@
     <div class="spots-grid">
 
       <div class="spot-card" data-primary="food">
-		<div class="spot-img-wrap"><img class="spot-img" src="https://svcstrg.cld.navitime.jp/travelguide/p34040012/p34040012_08.webp" alt="兼吉商店街" loading="lazy"></div>
+		<div class="spot-img-wrap"><img class="spot-img" data-src="https://svcstrg.cld.navitime.jp/travelguide/p34040012/p34040012_08.webp" alt="兼吉商店街" loading="lazy"></div>
         <div class="spot-time-badge">出發</div>
         <div class="spot-name">向島 兼吉商店街</div>
         <div class="spot-en">Mukaishima Kanekichi St.</div>
@@ -1704,7 +1751,7 @@
       </div>
 
       <div class="spot-card" data-primary="must">
-        <div class="spot-img-wrap"><img class="spot-img" src="https://img.cooljapan-videos.com/r/1000x666/files/article_images/6a1abbbe8a7ffae8c4e7aa9e7c910827eb6a4620.jpg.webp" alt="耕三寺・未來心の丘" loading="lazy"></div>
+        <div class="spot-img-wrap"><img class="spot-img" data-src="https://img.cooljapan-videos.com/r/600x400/files/article_images/6a1abbbe8a7ffae8c4e7aa9e7c910827eb6a4620.jpg.webp" alt="耕三寺・未來心の丘" loading="lazy"></div>
         <div class="spot-time-badge">中途</div>
         <div class="spot-name">耕三寺・未來心の丘</div>
         <div class="spot-en">Kosanji Temple &amp; Miraishin Hill</div>
@@ -1719,7 +1766,7 @@
       </div>
 
 	<div class="spot-card" data-primary="food">
-		<div class="spot-img-wrap"><img class="spot-img" src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAGEVWEWA_rBMg9rCuyQU5fZ66I5QqzOTQ5J3p4ludd1pAHNy2PGhtGVPaN8nZCpW29xJX6G7AS8fBCQ7Fup67MChAfEH48oLeamIytUo9zI9lm5O1pGqswqSPGeIXOpLvIPwG72bjg2JBE=w408-h543-k-no" alt="しおまち商店街" loading="lazy"></div>
+		<div class="spot-img-wrap"><img class="spot-img" data-src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAGEVWEWA_rBMg9rCuyQU5fZ66I5QqzOTQ5J3p4ludd1pAHNy2PGhtGVPaN8nZCpW29xJX6G7AS8fBCQ7Fup67MChAfEH48oLeamIytUo9zI9lm5O1pGqswqSPGeIXOpLvIPwG72bjg2JBE=w408-h543-k-no" alt="しおまち商店街" loading="lazy"></div>
         <div class="spot-time-badge">午餐</div>
         <div class="spot-name">しおまち商店街</div>
         <div class="spot-en">Shiomachi Shotengai</div>
@@ -1734,7 +1781,7 @@
       </div>
 
 <div class="spot-card" data-primary="food">
-		<div class="spot-img-wrap"><img class="spot-img" src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAFr_8HogwbWpn0sPHgIOYR1O5irI4zfp9p2wvYqhTDdJyHXDwz2lq5Z3JOFjg85UBofxoyRjsa4LkJ_CCNqFVCBSkKVf80uvUITN_oxdbj1668wNKmsMxpZNfbjjy4i9Bxy6qpwi3Z2V27T=w408-h272-k-no" alt="しおまち商店街" loading="lazy"></div>
+		<div class="spot-img-wrap"><img class="spot-img" data-src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAFr_8HogwbWpn0sPHgIOYR1O5irI4zfp9p2wvYqhTDdJyHXDwz2lq5Z3JOFjg85UBofxoyRjsa4LkJ_CCNqFVCBSkKVf80uvUITN_oxdbj1668wNKmsMxpZNfbjjy4i9Bxy6qpwi3Z2V27T=w408-h272-k-no" alt="しおまち商店街" loading="lazy"></div>
         <div class="spot-time-badge">午餐</div>
         <div class="spot-name">MINATOYA – 港口食堂</div>
         <div class="spot-en">Minato Shokudo Harbour Restaurant </div>
@@ -1749,7 +1796,7 @@
       </div>
 		
       <div class="spot-card" data-primary="food">
-		<div class="spot-img-wrap"><img class="spot-img" src="https://image.dive-hiroshima.com/wp-content/uploads/2022/01/18-12-1024x521.jpg" alt="瀨戶田 檸檬料理" loading="lazy"></div>
+		<div class="spot-img-wrap"><img class="spot-img" data-src="https://image.dive-hiroshima.com/wp-content/uploads/2022/01/18-12-1024x521.jpg" alt="瀨戶田 檸檬料理" loading="lazy"></div>
         <div class="spot-time-badge">午餐</div>
         <div class="spot-name">瀨戶田 檸檬料理</div>
         <div class="spot-en">Setoda Lemon Cuisine</div>
@@ -1764,7 +1811,7 @@
       </div>
 
       <div class="spot-card" data-primary="history">
-		<div class="spot-img-wrap"><img class="spot-img" src="https://momijiaoi.net/wp-content/uploads/2021/06/ooyamadumi2020032940.jpg" alt="大山祇神社" loading="lazy"></div>
+		<div class="spot-img-wrap"><img class="spot-img" data-src="https://momijiaoi.net/wp-content/uploads/2021/06/ooyamadumi2020032940.jpg" alt="大山祇神社" loading="lazy"></div>
         <div class="spot-time-badge">抵達</div>
         <div class="spot-name">大山祇神社</div>
         <div class="spot-en">Oyamazumi Shrine</div>
@@ -1816,7 +1863,7 @@
     <div class="spots-grid">
 
       <div class="spot-card" data-primary="history">
-		<div class="spot-img-wrap"><img class="spot-img" src="https://hit-product-resources-public.s3.ap-northeast-1.amazonaws.com/images/2408/XKaY2vfittosnhTO9nb9/large.jpg" alt="今治城" loading="lazy"></div>
+		<div class="spot-img-wrap"><img class="spot-img" data-src="https://hit-product-resources-public.s3.ap-northeast-1.amazonaws.com/images/2408/XKaY2vfittosnhTO9nb9/large.jpg" alt="今治城" loading="lazy"></div>
         <div class="spot-time-badge">今治 途中</div>
         <div class="spot-name">今治城</div>
         <div class="spot-en">Imabari Castle</div>
@@ -1831,7 +1878,7 @@
       </div>
 
       <div class="spot-card" data-primary="must">
-        <div class="spot-img-wrap"><img class="spot-img" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2a/92/e3/7b/132m.jpg?w=900&h=500&s=1" alt="松山城" loading="lazy"></div>
+        <div class="spot-img-wrap"><img class="spot-img" data-src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2a/92/e3/7b/132m.jpg?w=600&h=334&s=1" alt="松山城" loading="lazy"></div>
         <div class="spot-time-badge">下午</div>
         <div class="spot-name">松山城</div>
         <div class="spot-en">Matsuyama Castle</div>
@@ -1846,7 +1893,7 @@
       </div>
 
            <div class="spot-card" data-primary="must">
-        <div class="spot-img-wrap"><img class="spot-img" src="https://res.cloudinary.com/dho7osbtl/image/upload/w_1500,h_1000,c_fill,f_auto,fl_lossy,q_auto/v1/cms/filer_public/f8/ea/f8eaa914-01e8-4dd7-a4b6-b6993b2cb95b/spot_0055_02_erdicx" alt="道後溫泉本館" loading="lazy"></div>
+        <div class="spot-img-wrap"><img class="spot-img" data-src="https://res.cloudinary.com/dho7osbtl/image/upload/w_600,h_400,c_fill,f_auto,fl_lossy,q_auto/v1/cms/filer_public/f8/ea/f8eaa914-01e8-4dd7-a4b6-b6993b2cb95b/spot_0055_02_erdicx" alt="道後溫泉本館" loading="lazy"></div>
         <div class="spot-time-badge">傍晚</div>
         <div class="spot-name">道後溫泉本館</div>
         <div class="spot-en">Dogo Onsen Honkan</div>
@@ -1916,7 +1963,7 @@
      
 
       <div class="spot-card" data-primary="art">
-		<div class="spot-img-wrap"><img class="spot-img" src="https://github.com/glenn543/2026-/blob/main/images/%E5%9D%82%E4%B8%8A%E4%B9%8B%E9%9B%B2%E5%8D%9A%E7%89%A9%E9%A4%A8.webp?raw=true" alt="坂の上の雲博物館" loading="lazy"></div>
+		<div class="spot-img-wrap"><img class="spot-img" data-src="https://github.com/glenn543/2026-/blob/main/images/%E5%9D%82%E4%B8%8A%E4%B9%8B%E9%9B%B2%E5%8D%9A%E7%89%A9%E9%A4%A8.webp?raw=true" alt="坂の上の雲博物館" loading="lazy"></div>
         <div class="spot-time-badge">早上</div>
         <div class="spot-name">坂の上の雲博物館</div>
         <div class="spot-en">Shiba Ryotaro Memorial Museum</div>
@@ -1931,7 +1978,7 @@
       </div>
 
       <div class="spot-card" data-primary="art">
-		<div class="spot-img-wrap"><img class="spot-img" src="https://svcstrg.cld.navitime.jp/travelguide/p38010002/p38010002_01.jpg" alt="萬翠莊" loading="lazy"></div>
+		<div class="spot-img-wrap"><img class="spot-img" data-src="https://svcstrg.cld.navitime.jp/travelguide/p38010002/p38010002_01.jpg" alt="萬翠莊" loading="lazy"></div>
         <div class="spot-time-badge">早上</div>
         <div class="spot-name">萬翠莊</div>
         <div class="spot-en">Bansuiso Villa</div>
@@ -1946,7 +1993,7 @@
       </div>
 
       <div class="spot-card" data-primary="food">
-		<div class="spot-img-wrap"><img class="spot-img" src="https://shikoku-tourism.com/image/rendering/issue_page_image/74/trim.4000/4000/2000?v=5028efabce863950658a4f27c46f08e05e3b4344" alt="鯛魚料理" loading="lazy"></div>
+		<div class="spot-img-wrap"><img class="spot-img" data-src="https://shikoku-tourism.com/image/rendering/issue_page_image/74/trim.4000/4000/2000?v=5028efabce863950658a4f27c46f08e05e3b4344" alt="鯛魚料理" loading="lazy"></div>
         <div class="spot-time-badge">午餐</div>
         <div class="spot-name">鯛魚料理</div>
         <div class="spot-en">Sea Bream Cuisine</div>
@@ -1961,7 +2008,7 @@
       </div>
 
 		   <div class="spot-card" data-primary="history">
-		<div class="spot-img-wrap"><img class="spot-img" src="https://joyinhiroshima.com/uploads/2021/10/258-%E4%B8%89%E5%8E%9F%E5%9F%8E%E5%9D%80.jpg" alt="三原城跡" loading="lazy"></div>
+		<div class="spot-img-wrap"><img class="spot-img" data-src="https://joyinhiroshima.com/uploads/2021/10/258-%E4%B8%89%E5%8E%9F%E5%9F%8E%E5%9D%80.jpg" alt="三原城跡" loading="lazy"></div>
         <div class="spot-time-badge">傍晚 抵達</div>
         <div class="spot-name">三原城跡</div>
         <div class="spot-en">Mihara Castle Ruins</div>
@@ -1976,7 +2023,7 @@
       </div>
 
       <div class="spot-card" data-primary="history">
-		<div class="spot-img-wrap"><img class="spot-img" src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAHNLKpo71x5LWHI12SYxZn8BR5C8x9fXZuVEwFOcahf6zYhK4wpiiyzVymT0W0irZtIdoe1Ear8eZ788epz9aoguSIA3lYuqDw-9yf-eO_FtJoOEkHx5kJamIEixvkJw3x8B-JM=s680-w680-h510-rw" alt="永旺 三原店" loading="lazy"></div>
+		<div class="spot-img-wrap"><img class="spot-img" data-src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAHNLKpo71x5LWHI12SYxZn8BR5C8x9fXZuVEwFOcahf6zYhK4wpiiyzVymT0W0irZtIdoe1Ear8eZ788epz9aoguSIA3lYuqDw-9yf-eO_FtJoOEkHx5kJamIEixvkJw3x8B-JM=s680-w680-h510-rw" alt="永旺 三原店" loading="lazy"></div>
         <div class="spot-time-badge">晚上</div>
         <div class="spot-name">永旺 三原店</div>
         <div class="spot-en">イオン三原店</div>
@@ -1990,7 +2037,7 @@
         </div>
       </div>
     <div class="spot-card" data-primary="food">
-		<div class="spot-img-wrap"><img class="spot-img" src="https://image.dive-hiroshima.com/wp-content/uploads/2022/01/13-8.jpg" alt="章魚料理" loading="lazy"></div>
+		<div class="spot-img-wrap"><img class="spot-img" data-src="https://image.dive-hiroshima.com/wp-content/uploads/2022/01/13-8.jpg" alt="章魚料理" loading="lazy"></div>
         <div class="spot-time-badge">晚餐</div>
         <div class="spot-name">章魚料理</div>
         <div class="spot-en">Octopus Cuisine</div>
@@ -2080,6 +2127,10 @@
 
 </main>
 
+<button class="ds-btn" id="dsBtn" onclick="toggleDataSaver()">
+  <span id="dsIcon">📶</span><span id="dsLabel">顯示圖片</span>
+</button>
+
 <footer>
   <strong>廣島・愛媛 旅遊手冊 2026</strong><br>
   5/17 — 5/24 · 8 天 7 夜 · 廣島 / 吳市 / 宮島 / 尾道 / 島波海道 / 松山 / 三原<br>
@@ -2119,6 +2170,52 @@
 
   window.addEventListener('scroll', updateActiveNav, { passive: true });
   updateActiveNav();
+
+  // ── Data Saver ──
+  const DS_KEY = 'hiroshima_data_saver';
+  // default: ON（節省流量）；曾選擇顯示的話讀 localStorage
+  let dataSaving = localStorage.getItem(DS_KEY) !== 'off';
+
+  function applyDataSaver(saving) {
+    const btn = document.getElementById('dsBtn');
+    const icon = document.getElementById('dsIcon');
+    const label = document.getElementById('dsLabel');
+
+    if (saving) {
+      icon.textContent = '📶';
+      label.textContent = '顯示圖片';
+      btn.classList.remove('loaded');
+    } else {
+      icon.textContent = '📷';
+      label.textContent = '節省流量';
+      btn.classList.add('loaded');
+
+      // 載入所有景點圖片
+      document.querySelectorAll('img.spot-img[data-src]').forEach(img => {
+        if (!img.getAttribute('src')) {
+          img.src = img.dataset.src;
+          img.addEventListener('load', () => {
+            img.closest('.spot-img-wrap').classList.add('img-loaded');
+          }, { once: true });
+        }
+      });
+
+      // 載入 hero 背景圖
+      const heroPhoto = document.querySelector('.hero-photo[data-bg]');
+      if (heroPhoto && !heroPhoto.style.backgroundImage) {
+        heroPhoto.style.backgroundImage = `url('${heroPhoto.dataset.bg}')`;
+      }
+    }
+  }
+
+  function toggleDataSaver() {
+    dataSaving = !dataSaving;
+    localStorage.setItem(DS_KEY, dataSaving ? 'on' : 'off');
+    applyDataSaver(dataSaving);
+  }
+
+  // 初始化
+  applyDataSaver(dataSaving);
 </script>
 
 
