@@ -826,29 +826,8 @@
   }
   .ds-btn.loaded { background: var(--red-dark); }
 
-  /* placeholder 格子（圖片未載入時） */
-  .spot-img-wrap:not(.img-loaded) {
-    aspect-ratio: 4 / 3;
-    background: var(--paper-warm);
-    border-radius: 12px 12px 0 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .spot-img-wrap:not(.img-loaded)::after {
-    content: '📷';
-    font-size: 22px;
-    opacity: 0.25;
-  }
-
-  /* 圖片載入後正常顯示 */
-  .spot-img-wrap.img-loaded .spot-img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  .spot-img-wrap.img-loaded::after { display: none; }
+  /* 節省模式時隱藏所有圖片區塊 */
+  body.data-saving .spot-img-wrap { display: none; }
 </style>
 </head>
 <body>
@@ -2178,31 +2157,29 @@
 
   function applyDataSaver(saving) {
     const btn = document.getElementById('dsBtn');
-    const icon = document.getElementById('dsIcon');
-    const label = document.getElementById('dsLabel');
+    const heroPhoto = document.querySelector('.hero-photo[data-bg]');
 
     if (saving) {
-      icon.textContent = '📶';
-      label.textContent = '顯示圖片';
+      document.body.classList.add('data-saving');
+      btn.querySelector('#dsIcon').textContent = '📶';
+      btn.querySelector('#dsLabel').textContent = '顯示圖片';
       btn.classList.remove('loaded');
+      if (heroPhoto) heroPhoto.style.backgroundImage = 'none';
     } else {
-      icon.textContent = '📷';
-      label.textContent = '節省流量';
+      document.body.classList.remove('data-saving');
+      btn.querySelector('#dsIcon').textContent = '📷';
+      btn.querySelector('#dsLabel').textContent = '節省流量';
       btn.classList.add('loaded');
 
-      // 載入所有景點圖片
+      // 載入尚未載入的景點圖片
       document.querySelectorAll('img.spot-img[data-src]').forEach(img => {
         if (!img.getAttribute('src')) {
           img.src = img.dataset.src;
-          img.addEventListener('load', () => {
-            img.closest('.spot-img-wrap').classList.add('img-loaded');
-          }, { once: true });
         }
       });
 
       // 載入 hero 背景圖
-      const heroPhoto = document.querySelector('.hero-photo[data-bg]');
-      if (heroPhoto && !heroPhoto.style.backgroundImage) {
+      if (heroPhoto) {
         heroPhoto.style.backgroundImage = `url('${heroPhoto.dataset.bg}')`;
       }
     }
